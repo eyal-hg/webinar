@@ -1,0 +1,14 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 1920 1349" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame 12523" clip-path="url(#clip0_0_4)">
+<path id="Vector 41 (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M1402.79 567.06C1393.41 557.592 1400.11 541.5 1413.44 541.5H1928V-1.5H771.59C513.389 -1.5 383.506 310.155 565.285 493.52L851.208 781.94C860.595 791.408 853.888 807.5 840.556 807.5H-34V1350.5H1482.41C1740.61 1350.5 1870.49 1038.84 1688.72 855.48L1402.79 567.06Z" fill="url(#paint0_radial_0_4)"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_0_4" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(915 627.5) rotate(25.4549) scale(2331.31 5653.94)">
+<stop stop-color="#39ABE2"/>
+<stop offset="1" stop-color="#1F5E7C"/>
+</radialGradient>
+<clipPath id="clip0_0_4">
+<rect width="1920" height="1349" fill="white"/>
+</clipPath>
+</defs>
+</svg>
