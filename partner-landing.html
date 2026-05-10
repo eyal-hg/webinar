@@ -111,6 +111,19 @@
       font-weight: 400;
       margin: 12px 0 0;
     }
+    .partner-hero__credential {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 8px;
+      padding: 5px 12px 6px;
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--white);
+      background: var(--salmon);
+      border-radius: 50px;
+      letter-spacing: -.005em;
+      box-shadow: 0 4px 14px rgba(228,131,117,.32);
+    }
     .partner-hero__quote {
       font-size: clamp(1.4rem, 2.3vw, 2.1rem);
       color: var(--navy);
@@ -228,6 +241,138 @@
     }
 
     /* ══════════════════════════════════
+       NARRATIVE SECTION 2.1.5 — Headstart
+       The unfair advantage: Israel briefs us before the AI starts.
+    ══════════════════════════════════ */
+    .partner-headstart {
+      background: linear-gradient(180deg, var(--off) 0%, var(--white) 100%);
+      padding: clamp(80px, 11vw, 120px) 24px;
+      font-family: 'Rubik', sans-serif;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .partner-headstart__inner {
+      max-width: 920px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .partner-headstart__label {
+      display: inline-block;
+      font-size: .9rem;
+      font-weight: 500;
+      color: var(--salmon);
+      background: rgba(228,131,117,.1);
+      border: 1px solid rgba(228,131,117,.32);
+      padding: 8px 18px;
+      border-radius: 50px;
+      margin-bottom: 32px;
+      letter-spacing: -.005em;
+    }
+    .partner-headstart__headline {
+      font-size: clamp(2rem, 4.2vw, 3.4rem);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.15;
+      letter-spacing: -.025em;
+      margin: 0 0 40px;
+    }
+    .partner-headstart__highlight {
+      color: var(--salmon);
+      font-weight: 700;
+    }
+    .partner-headstart__intro {
+      max-width: 680px;
+      margin: 0 auto 48px;
+    }
+    .partner-headstart__intro p {
+      font-size: clamp(1.05rem, 1.55vw, 1.3rem);
+      color: var(--text);
+      line-height: 1.65;
+      margin: 0 0 6px;
+    }
+    .partner-headstart__pivot {
+      font-size: clamp(1.1rem, 1.85vw, 1.4rem) !important;
+      color: var(--navy) !important;
+      font-weight: 600 !important;
+      margin: 28px 0 0 !important;
+    }
+    .partner-headstart__steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 0 0 56px;
+      text-align: right;
+      direction: rtl;
+    }
+    .partner-headstart__step {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 32px 26px 28px;
+      position: relative;
+      box-shadow: 0 8px 24px rgba(12,64,104,.06);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .partner-headstart__step:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(12,64,104,.1);
+    }
+    .partner-headstart__step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--salmon);
+      color: var(--white);
+      font-family: 'Rubik', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+      box-shadow: 0 6px 16px rgba(228,131,117,.32);
+    }
+    .partner-headstart__step p {
+      font-size: 1rem;
+      color: var(--text);
+      line-height: 1.65;
+      margin: 0;
+    }
+    .partner-headstart__close {
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: clamp(1.15rem, 1.95vw, 1.55rem);
+      color: var(--navy);
+      line-height: 1.5;
+      font-weight: 500;
+    }
+
+    /* Decorative blue glow behind the headline */
+    .partner-headstart::before {
+      content: '';
+      position: absolute;
+      top: -120px;
+      right: -120px;
+      width: 380px;
+      height: 380px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(57,171,226,.14) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @media (max-width: 768px) {
+      .partner-headstart { padding: 64px 20px; }
+      .partner-headstart__steps {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      .partner-headstart__step { padding: 24px 22px; }
+    }
+
+    /* ══════════════════════════════════
        NARRATIVE SECTION 2.2 — Mid quote
        (between ai-trio and mn-features)
     ══════════════════════════════════ */
@@ -272,6 +417,18 @@
     .partner-midquote__signature strong {
       color: var(--navy);
       font-weight: 700;
+    }
+    .partner-midquote__badge {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 6px;
+      padding: 3px 10px 4px;
+      font-size: .72rem;
+      font-weight: 700;
+      color: var(--white);
+      background: var(--salmon);
+      border-radius: 50px;
+      letter-spacing: -.005em;
     }
     @media (max-width: 768px) {
       .partner-midquote__inner {
@@ -327,6 +484,18 @@
     .partner-summary__signature strong {
       color: var(--navy);
       font-weight: 700;
+    }
+    .partner-summary__badge {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 6px;
+      padding: 3px 10px 4px;
+      font-size: .72rem;
+      font-weight: 700;
+      color: var(--white);
+      background: var(--salmon);
+      border-radius: 50px;
+      letter-spacing: -.005em;
     }
     .partner-summary__cta {
       font-size: 1.05rem;
@@ -453,7 +622,7 @@
       <div class="partner-hero__text">
         <span class="partner-hero__label">מומלץ על ידי</span>
         <h1 class="partner-hero__name" id="partner-hero-name"></h1>
-        <p class="partner-hero__role" id="partner-hero-role"></p>
+        <p class="partner-hero__role"><span id="partner-hero-role"></span> <span class="partner-hero__credential">HK Elite Partner</span></p>
         <blockquote class="partner-hero__quote" id="partner-hero-quote"></blockquote>
         <hr class="partner-hero__divider" />
         <span class="partner-hero__intro-label">ממליץ לך להכיר:</span>
@@ -465,16 +634,61 @@
 
   <!-- ══════════════════════════════════
        NARRATIVE 2.1 — BRIDGE
+       Reframes the accountant as a forward-thinking technologist.
        Hidden by default. Revealed by JS only when ?ref=<key> matches.
   ══════════════════════════════════ -->
   <section class="partner-bridge" id="partner-bridge" hidden>
     <div class="partner-bridge__inner">
       <span class="partner-bridge__label">למה <span data-partner-firstname></span> שלח אותך לכאן?</span>
       <div class="partner-bridge__body">
-        <p>רואה חשבון מסתכל אחורה — מה היה.<br/>דוחות, מס, רגולציה. זה התפקיד שלו.</p>
-        <p><span class="partner-bridge__highlight">אבל מי מסתכל על הכסף שלך קדימה?</span><br/>מי יודע מה יקרה לחשבון שלך בעוד שבועיים?</p>
-        <p>זה בדיוק מה שאנחנו עושים.</p>
+        <p>רואה חשבון של היום הוא גם איש טכנולוגיה.</p>
+        <p><span data-partner-firstname></span> לא הסתפק במסים ודוחות — הוא בחר ללוות אותך גם בעולם החדש: של AI, של תזרים בזמן אמת, של החלטות מבוססות דאטה.</p>
+        <p><span class="partner-bridge__highlight">לא כל רואה חשבון בוחר בדרך הזו. <span data-partner-firstname></span> כן.</span></p>
+        <p>זה אומר שלך יש משהו שלרוב העסקים אין:<br/>רואה חשבון שמוביל את העתיד, לא רץ אחריו.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       NARRATIVE 2.1.5 — HEADSTART
+       The unfair advantage: Israel briefs us on the business before
+       day one. The AI starts with years of context, not from scratch.
+       This is the section that makes the accountant the hero of the
+       page — his knowledge becomes the warm-start for the system.
+       Hidden by default. Revealed by JS only when ?ref=<key> matches.
+  ══════════════════════════════════ -->
+  <section class="partner-headstart" id="partner-headstart" hidden>
+    <div class="partner-headstart__inner">
+      <span class="partner-headstart__label">היתרון שלך — להגיע מ<span data-partner-firstname></span></span>
+      <h2 class="partner-headstart__headline">
+        לא מתחילים מאפס.<br/>
+        <span class="partner-headstart__highlight">מתחילים עם שנים של ידע.</span>
+      </h2>
+      <div class="partner-headstart__intro">
+        <p><span data-partner-firstname></span> מכיר את העסק שלך כבר שנים.</p>
+        <p>הוא יודע מתי הלקוח הגדול שלך מאחר.</p>
+        <p>הוא יודע איך נראה החודש החזק והחודש החלש.</p>
+        <p>איפה אתה דחוס, ואיפה יש לך מרווח.</p>
+        <p class="partner-headstart__pivot">הידע הזה היה בראש שלו בלבד. עד עכשיו.</p>
+      </div>
+      <div class="partner-headstart__steps">
+        <div class="partner-headstart__step">
+          <div class="partner-headstart__step-num">1</div>
+          <p><span data-partner-firstname></span> מעביר לנו תקציר על העסק שלך — דפוסים, סיכונים, הזדמנויות.</p>
+        </div>
+        <div class="partner-headstart__step">
+          <div class="partner-headstart__step-num">2</div>
+          <p>ה-AI שלנו לומד את ההקשר. לפני שאתה אפילו פותח וואטסאפ.</p>
+        </div>
+        <div class="partner-headstart__step">
+          <div class="partner-headstart__step-num">3</div>
+          <p>ביום הראשון, כשאתה שואל "כמה כסף יהיה לי?" — התשובה כבר מבינה את העסק שלך.</p>
+        </div>
+      </div>
+      <p class="partner-headstart__close">
+        זה לא AI גנרי שלומד ממך לאט-לאט.<br/>
+        <span class="partner-headstart__highlight">זה AI שיודע מי אתה — מהיום הראשון.</span>
+      </p>
     </div>
   </section>
 
@@ -511,9 +725,17 @@
     <div class="mn-wrap">
       <div class="ai-problem__header">
         <div class="ai-section-divider-title">הבעיה שכולם מכירים</div>
-        <h2 class="mn-section-title mn-section-title--center">
+        <!-- Default headline — used when no ?ref= partner is active.
+             Conflicts with a partner referral context (it disparages the
+             "accountant's reports"), so JS swaps it for the partner-safe
+             version below when has-partner activates. -->
+        <h2 class="mn-section-title mn-section-title--center" id="problem-title-default">
           הדוחות של רואה החשבון שלך נראים טוב<br/>
           <span class="mn-accent-salmon">אבל הבנק מספר סיפור אחר.</span>
+        </h2>
+        <h2 class="mn-section-title mn-section-title--center" id="problem-title-partner" hidden>
+          הדוחות מסכמים את אתמול.<br/>
+          <span class="mn-accent-salmon">אבל מה יקרה מחר?</span>
         </h2>
       </div>
       <div class="ai-problem__list">
@@ -770,17 +992,18 @@
 
   <!-- ══════════════════════════════════
        NARRATIVE 2.2 — MID QUOTE
-       Placed AFTER demo so the accountant's voice ("I send my clients here
-       every time someone asks 'how much money will I have'") lands stronger
-       once the reader has just seen the WhatsApp answer in action.
+       The accountant's practice-evolution story — placed AFTER demo so
+       the reader has just seen the AI answer in action, and now hears
+       the accountant explain how he chose to integrate this into his
+       practice. Positions him as a deliberate, modern professional.
        Hidden by default. Revealed by JS only when ?ref=<key> matches.
   ══════════════════════════════════ -->
   <section class="partner-midquote" id="partner-midquote" hidden>
     <div class="partner-midquote__inner">
       <img src="" alt="" class="partner-midquote__photo" id="partner-midquote-photo" />
       <div class="partner-midquote__body">
-        <p class="partner-midquote__quote">בכל פעם שלקוח שלי שואל "כמה כסף יהיה לי?" — אני שולח אותו לכאן. כי אני יודע שהוא יקבל תשובה אמיתית, לא ניחוש.</p>
-        <p class="partner-midquote__signature"><strong data-partner-fullname></strong>, רואה החשבון שלך</p>
+        <p class="partner-midquote__quote">לקוחות שלי שואלים אותי 'כמה כסף יהיה לי בסוף החודש?'. פעם זה לקח לי שעות לבדוק. היום אני שולח אותם לכאן — והם מקבלים תשובה תוך שנייה. ככה אני נותן יותר ערך, מהר יותר.</p>
+        <p class="partner-midquote__signature"><strong data-partner-fullname></strong>, רואה חשבון <span class="partner-midquote__badge">HK Elite Partner</span></p>
       </div>
     </div>
   </section>
@@ -1076,7 +1299,7 @@
     <div class="partner-summary__inner">
       <img src="" alt="" class="partner-summary__photo" id="partner-summary-photo" />
       <h2 class="partner-summary__headline"><strong data-partner-firstname></strong> המליץ. עכשיו תיקח את הצעד הבא.</h2>
-      <p class="partner-summary__signature"><strong data-partner-fullname></strong>, רואה החשבון שלך</p>
+      <p class="partner-summary__signature"><strong data-partner-fullname></strong>, רואה חשבון <span class="partner-summary__badge">HK Elite Partner</span></p>
       <a href="#contact" class="mn-btn mn-btn--salmon partner-summary__cta">אני רוצה שיחה</a>
     </div>
   </section>
@@ -1202,6 +1425,10 @@
           var bridge = document.getElementById('partner-bridge');
           if (bridge) bridge.hidden = false;
 
+          // ── Headstart (the unfair advantage) ──
+          var headstart = document.getElementById('partner-headstart');
+          if (headstart) headstart.hidden = false;
+
           // ── Mid-quote (uses the same photo) ──
           var midquote = document.getElementById('partner-midquote');
           var midPhoto = document.getElementById('partner-midquote-photo');
@@ -1219,6 +1446,14 @@
             summaryPhoto.alt = p.name;
           }
           if (summary) summary.hidden = false;
+
+          // ── Problem-section headline swap ──
+          // The default headline disparages "the accountant's reports" — would
+          // contradict a partner referral. Hide default, reveal partner version.
+          var titleDefault = document.getElementById('problem-title-default');
+          var titlePartner = document.getElementById('problem-title-partner');
+          if (titleDefault) titleDefault.hidden = true;
+          if (titlePartner) titlePartner.hidden = false;
 
           // Add a body class so partner-only CSS overrides can scope cleanly.
           document.body.classList.add('has-partner');
