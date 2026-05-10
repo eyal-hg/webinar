@@ -1,0 +1,15 @@
+{
+  "_comment": "מאגר רואי חשבון שותפים. הפרמטר ?ref=<key> ב-URL של partner-landing.html טוען את ראש ה-Hero. הוסיפו רואה חשבון חדש בתבנית למטה. quote — אופציונלי.",
+  "_template": {
+    "name": "שם מלא",
+    "title": "תפקיד / שם משרד",
+    "photo": "/assets/partners/<filename>.jpg",
+    "quote": "ציטוט אישי קצר (אופציונלי)"
+  },
+  "demo": {
+    "name": "ישראל ישראלי",
+    "title": "רואה חשבון",
+    "photo": "/assets/partner-placeholder.svg",
+    "quote": "שולח את הלקוחות שלי לכאן. הם בידיים טובות, ולי יש ראש שקט."
+  }
+}

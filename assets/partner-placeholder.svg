@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" preserveAspectRatio="xMidYMid slice" role="img" aria-label="silhouette placeholder — professional headshot">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#eaf2f8"/>
+      <stop offset="1" stop-color="#b8cfdc"/>
+    </linearGradient>
+  </defs>
+  <!-- background -->
+  <rect width="600" height="800" fill="url(#bg)"/>
+  <!-- suit (shoulders + body) -->
+  <path d="M0 800 Q 0 350 300 350 Q 600 350 600 800 Z" fill="#7a8a99"/>
+  <!-- head -->
+  <circle cx="300" cy="285" r="115" fill="#7a8a99"/>
+  <!-- shirt — V-neck cutout in lighter shade -->
+  <path d="M252 405 L 300 525 L 348 405 L 348 800 L 252 800 Z" fill="#d8e3eb"/>
+  <!-- tie — narrow strip down center -->
+  <path d="M285 525 L 315 525 L 312 800 L 288 800 Z" fill="#5a6a78"/>
+</svg>

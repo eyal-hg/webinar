@@ -15,3 +15,8 @@
 
 # Local server artifacts
 node_modules/
+
+# Local snapshot of money.hak.co.il used as a reference for partner-landing.html.
+# Not part of the deployed site — kept locally for re-cloning when the source
+# updates. Don't commit (would duplicate /assets, /css, /js and rot over time).
+hkmoney/
