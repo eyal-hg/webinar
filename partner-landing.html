@@ -3,37 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HK Money AI – AI שמנהל לך את הכסף כל יום</title>
-  <meta name="description" content="שילוב מערכת AI ייעודית עם מנהל תזרים אישי ויועץ פיננסי – הכל בוואטסאפ, כל יום. תדע כמה כסף יהיה לך ביום שישי." />
+  <title>וובינר בלעדי — AI לעסקים קטנים | HK Money</title>
+  <meta name="description" content="60 דקות לייב עם אייל חזות (מייסד Bizibox) ואופיר קריספין. AI לעסקים קטנים — איך לא להישאר מאחור. וובינר בלעדי ללקוחות של רואה החשבון שלך." />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="64x64" href="assets/money-hk-icon.png" />
   <link rel="shortcut icon" href="assets/money-hk-icon.png" />
   <link rel="apple-touch-icon" href="assets/money-hk-icon.png" />
 
-  <!-- Open Graph / Social sharing -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="HK Money AI – AI שמנהל לך את הכסף כל יום" />
-  <meta property="og:description" content="המחלקה הפיננסית ההיברידית הראשונה: ניהול תזרים אנושי, ליווי כלכלן אישי ומענה AI מיידי בוואטסאפ." />
+  <meta property="og:title" content="וובינר בלעדי — AI לעסקים קטנים" />
+  <meta property="og:description" content="60 דקות לייב עם אייל חזות ואופיר קריספין. וובינר חינמי בלעדי ללקוחות של רואה החשבון שלך." />
   <meta property="og:image" content="assets/money-hk-icon.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="HK Money AI – AI שמנהל לך את הכסף כל יום" />
-  <meta name="twitter:description" content="המחלקה הפיננסית ההיברידית הראשונה: ניהול תזרים אנושי, ליווי כלכלן אישי ומענה AI מיידי בוואטסאפ." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Karantina:wght@400;700&family=Rubik:wght@300;400;500;600;700&family=Open+Sans+Hebrew:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Karantina:wght@400;700&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/money.css" />
   <link rel="stylesheet" href="css/hk-money-ai.css?v=5" />
 
-  <!-- Partner-aware hero (only shown when ?ref=<key> matches partners-data.json).
-       Full-bleed split: photo on right (40%), text on left (60%), 75vh tall.
-       The accountant is the hero — HK Money is what they recommend. -->
   <style>
-    /* Force the [hidden] attribute to actually hide flex/grid sections —
-       without this, `display: flex` on .partner-hero would override it. */
+    /* Force [hidden] over flex/grid */
     [hidden] { display: none !important; }
 
+    /* ══════════════════════════════════════
+       PARTNER HERO — full-bleed split (photo + accountant invite)
+       Hidden by default. Revealed when ?ref=<key> matches.
+    ══════════════════════════════════════ */
     .partner-hero {
       background: #f8f9fa;
       min-height: 75vh;
@@ -45,11 +43,9 @@
     }
     .partner-hero__inner {
       display: flex;
-      flex-direction: row; /* RTL: first child (photo) lands on right */
+      flex-direction: row;
       width: 100%;
     }
-
-    /* Photo column — right 40% */
     .partner-hero__photo-wrap {
       flex: 0 0 40%;
       position: relative;
@@ -78,17 +74,13 @@
       z-index: 2;
       white-space: nowrap;
       letter-spacing: -.005em;
-      text-align: center;
     }
-
-    /* Text column — left 60% */
     .partner-hero__text {
       flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
       padding: 64px 80px;
-      gap: 0;
       font-family: 'Rubik', sans-serif;
     }
     .partner-hero__label {
@@ -132,79 +124,343 @@
       border-right: 3px solid var(--salmon);
       padding-right: 24px;
       margin: 36px 0 28px;
-      font-style: normal;
       letter-spacing: -.005em;
     }
-    .partner-hero__divider {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin: 8px 0 18px;
-      width: 100%;
+    /* Embedded webinar invite block — within the hero text column */
+    .partner-hero__invite {
+      background: rgba(57,171,226,.07);
+      border-right: 3px solid var(--blue);
+      padding: 22px 24px 24px;
+      border-radius: 14px;
+      margin: 28px 0 28px;
     }
-    .partner-hero__intro-label {
-      font-size: 1rem;
-      color: var(--muted);
+    .partner-hero__invite-eyebrow {
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--blue);
+      letter-spacing: .04em;
+      margin: 0 0 8px;
+    }
+    .partner-hero__invite-title {
+      font-size: clamp(1.25rem, 2vw, 1.7rem);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+      letter-spacing: -.015em;
+      margin: 0 0 16px;
+    }
+    .partner-hero__invite-meta {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: .95rem;
+      color: var(--text);
       font-weight: 500;
-      margin-bottom: 8px;
     }
-    .partner-hero__brand {
-      width: 200px;
-      height: auto;
-      display: block;
-      margin: 0 0 24px;
+    .partner-hero__invite-meta li {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .partner-hero__invite-meta svg {
+      width: 18px;
+      height: 18px;
+      color: var(--blue);
+      flex-shrink: 0;
     }
     .partner-hero__cta {
       align-self: flex-start;
-      font-size: 1.05rem;
-      padding: 16px 36px;
-      box-shadow: 0 10px 28px rgba(228,131,117,.32);
+      font-size: 1.1rem;
+      padding: 18px 44px;
+      box-shadow: 0 12px 32px rgba(228,131,117,.36);
+    }
+    .partner-hero__cta-note {
+      font-size: .82rem;
+      color: var(--muted);
+      margin: 12px 0 0;
     }
 
-    /* Friendly note above submit button when ref present */
-    .partner-form-note {
+    /* When the partner-hero is active (?ref= matched), the standalone
+       webinar card is redundant — the invitation is now self-contained
+       at the top of the page. */
+    body.has-partner .webinar-card-section { display: none !important; }
+
+    /* ══════════════════════════════════════
+       WEBINAR CARD — the central offer
+    ══════════════════════════════════════ */
+    .webinar-card-section {
+      background: linear-gradient(180deg, var(--white) 0%, var(--off) 100%);
+      padding: clamp(72px, 10vw, 110px) 24px;
       font-family: 'Rubik', sans-serif;
-      font-size: .85rem;
-      color: rgba(255,255,255,.9);
+    }
+    .webinar-card {
+      max-width: 760px;
+      margin: 0 auto;
+      background: var(--white);
+      border-radius: 28px;
+      padding: clamp(36px, 5vw, 56px);
+      box-shadow: 0 24px 64px rgba(12,64,104,.12);
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
       text-align: center;
-      margin: 4px 0 0;
     }
-    .partner-form-note strong { color: var(--white); font-weight: 700; }
+    .webinar-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, var(--salmon), var(--blue));
+    }
+    .webinar-card__tag {
+      display: inline-block;
+      font-size: .82rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+      color: var(--salmon);
+      background: rgba(228,131,117,.1);
+      border: 1px solid rgba(228,131,117,.32);
+      padding: 8px 18px;
+      border-radius: 50px;
+      margin-bottom: 24px;
+    }
+    .webinar-card__title {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: -.025em;
+      line-height: 1.15;
+      margin: 0 0 14px;
+    }
+    .webinar-card__subtitle {
+      font-size: clamp(1.05rem, 1.7vw, 1.3rem);
+      color: var(--text);
+      font-weight: 400;
+      margin: 0 0 36px;
+      line-height: 1.5;
+    }
+    .webinar-card__subtitle strong {
+      color: var(--navy);
+      font-weight: 700;
+    }
+    .webinar-card__details {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 0 0 36px;
+      text-align: right;
+    }
+    .webinar-card__detail {
+      background: var(--off);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px 22px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .webinar-card__detail-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--blue);
+      flex-shrink: 0;
+      border: 1px solid var(--border);
+    }
+    .webinar-card__detail-icon svg { width: 22px; height: 22px; }
+    .webinar-card__detail-label {
+      font-size: .78rem;
+      color: var(--muted);
+      font-weight: 500;
+      margin: 0 0 2px;
+    }
+    .webinar-card__detail-value {
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 0;
+      line-height: 1.2;
+    }
+    .webinar-card__cta {
+      font-size: 1.1rem;
+      padding: 18px 44px;
+      box-shadow: 0 12px 32px rgba(228,131,117,.36);
+    }
+    .webinar-card__free-note {
+      display: block;
+      font-size: .85rem;
+      color: var(--muted);
+      margin-top: 16px;
+    }
 
-    /* ── HERO without man image: center the WhatsApp chat ── */
-    .mn-hero__images--chat-only { position: relative; }
-    .mn-hero__images--chat-only .mn-hero__chat-wrap {
-      position: relative !important;
-      left: auto !important;
-      right: auto !important;
-      top: auto !important;
-      bottom: auto !important;
-      width: clamp(320px, 46%, 560px) !important;
-      height: auto !important;
-      margin: 0 auto !important;
-      box-shadow: -30px 28px 64px rgba(12,64,104,.18) !important;
-      border-radius: 16px !important;
-      overflow: hidden !important;
+    /* ══════════════════════════════════════
+       WEBINAR BENEFITS — "60 דקות שישנו..."
+    ══════════════════════════════════════ */
+    .webinar-benefits {
+      background: var(--white);
+      padding: clamp(72px, 10vw, 110px) 24px;
+      font-family: 'Rubik', sans-serif;
     }
-    .mn-hero__images--chat-only .mn-hero__chat-img {
-      width: 100% !important;
-      height: auto !important;
-      object-fit: contain !important;
-      object-position: center !important;
-      opacity: 1 !important;
+    .webinar-benefits__inner {
+      max-width: 980px;
+      margin: 0 auto;
     }
-    @media (max-width: 768px) {
-      .mn-hero__images--chat-only .mn-hero__chat-wrap {
-        width: clamp(280px, 88%, 460px) !important;
-      }
+    .webinar-benefits__header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .webinar-benefits__title {
+      font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: -.02em;
+      line-height: 1.2;
+      margin: 0;
+    }
+    .webinar-benefits__title .accent { color: var(--salmon); }
+    .webinar-benefits__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+    .webinar-benefit {
+      display: flex;
+      gap: 18px;
+      padding: 24px 26px;
+      background: var(--off);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      align-items: flex-start;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .webinar-benefit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(12,64,104,.08);
+    }
+    .webinar-benefit__check {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--salmon);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 6px 16px rgba(228,131,117,.32);
+    }
+    .webinar-benefit__check svg { width: 18px; height: 18px; }
+    .webinar-benefit__body {
+      flex: 1;
+    }
+    .webinar-benefit__title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 0 0 4px;
+      letter-spacing: -.01em;
+    }
+    .webinar-benefit__text {
+      font-size: .95rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin: 0;
     }
 
-    /* ══════════════════════════════════
-       NARRATIVE SECTION 2.1 — Bridge
-       (between partner-hero and mn-hero)
-    ══════════════════════════════════ */
+    /* ══════════════════════════════════════
+       HOSTS — Eyal & Ofir
+    ══════════════════════════════════════ */
+    .webinar-hosts {
+      background: var(--off);
+      padding: clamp(72px, 10vw, 110px) 24px;
+      font-family: 'Rubik', sans-serif;
+    }
+    .webinar-hosts__inner {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+    .webinar-hosts__header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .webinar-hosts__label {
+      display: inline-block;
+      font-size: .82rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+      color: var(--blue);
+      background: rgba(57,171,226,.1);
+      border: 1px solid rgba(57,171,226,.28);
+      padding: 8px 18px;
+      border-radius: 50px;
+      margin-bottom: 18px;
+    }
+    .webinar-hosts__title {
+      font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: -.02em;
+      margin: 0;
+    }
+    .webinar-hosts__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+    .webinar-host {
+      background: var(--white);
+      border-radius: 22px;
+      padding: 36px 32px 32px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 28px rgba(12,64,104,.06);
+      text-align: center;
+      transition: transform .25s;
+    }
+    .webinar-host:hover { transform: translateY(-4px); }
+    .webinar-host__photo {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 22px;
+      display: block;
+      background: linear-gradient(135deg, #d8e8f2, #b8cfdc);
+      border: 4px solid var(--white);
+      box-shadow: 0 12px 32px rgba(12,64,104,.18);
+    }
+    .webinar-host__name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 0 0 6px;
+      letter-spacing: -.015em;
+    }
+    .webinar-host__role {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--salmon);
+      margin: 0 0 16px;
+    }
+    .webinar-host__bio {
+      font-size: .98rem;
+      color: var(--text);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* ══════════════════════════════════════
+       PARTNER BRIDGE — "למה X שלח אותך לכאן"
+    ══════════════════════════════════════ */
     .partner-bridge {
       background: var(--white);
-      padding: clamp(72px, 10vw, 120px) 24px;
+      padding: clamp(72px, 10vw, 110px) 24px;
       text-align: center;
       font-family: 'Rubik', sans-serif;
     }
@@ -231,151 +487,16 @@
       font-weight: 400;
       letter-spacing: -.005em;
     }
-    .partner-bridge__body p {
-      margin: 0 0 1.2em;
-    }
+    .partner-bridge__body p { margin: 0 0 1.2em; }
     .partner-bridge__body p:last-child { margin-bottom: 0; }
     .partner-bridge__highlight {
       color: var(--salmon);
       font-weight: 600;
     }
 
-    /* ══════════════════════════════════
-       NARRATIVE SECTION 2.1.5 — Headstart
-       The unfair advantage: Israel briefs us before the AI starts.
-    ══════════════════════════════════ */
-    .partner-headstart {
-      background: linear-gradient(180deg, var(--off) 0%, var(--white) 100%);
-      padding: clamp(80px, 11vw, 120px) 24px;
-      font-family: 'Rubik', sans-serif;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .partner-headstart__inner {
-      max-width: 920px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-    }
-    .partner-headstart__label {
-      display: inline-block;
-      font-size: .9rem;
-      font-weight: 500;
-      color: var(--salmon);
-      background: rgba(228,131,117,.1);
-      border: 1px solid rgba(228,131,117,.32);
-      padding: 8px 18px;
-      border-radius: 50px;
-      margin-bottom: 32px;
-      letter-spacing: -.005em;
-    }
-    .partner-headstart__headline {
-      font-size: clamp(2rem, 4.2vw, 3.4rem);
-      font-weight: 700;
-      color: var(--navy);
-      line-height: 1.15;
-      letter-spacing: -.025em;
-      margin: 0 0 40px;
-    }
-    .partner-headstart__highlight {
-      color: var(--salmon);
-      font-weight: 700;
-    }
-    .partner-headstart__intro {
-      max-width: 680px;
-      margin: 0 auto 48px;
-    }
-    .partner-headstart__intro p {
-      font-size: clamp(1.05rem, 1.55vw, 1.3rem);
-      color: var(--text);
-      line-height: 1.65;
-      margin: 0 0 6px;
-    }
-    .partner-headstart__pivot {
-      font-size: clamp(1.1rem, 1.85vw, 1.4rem) !important;
-      color: var(--navy) !important;
-      font-weight: 600 !important;
-      margin: 28px 0 0 !important;
-    }
-    .partner-headstart__steps {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin: 0 0 56px;
-      text-align: right;
-      direction: rtl;
-    }
-    .partner-headstart__step {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 32px 26px 28px;
-      position: relative;
-      box-shadow: 0 8px 24px rgba(12,64,104,.06);
-      transition: transform .2s, box-shadow .2s;
-    }
-    .partner-headstart__step:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 40px rgba(12,64,104,.1);
-    }
-    .partner-headstart__step-num {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: var(--salmon);
-      color: var(--white);
-      font-family: 'Rubik', sans-serif;
-      font-size: 1rem;
-      font-weight: 700;
-      margin-bottom: 18px;
-      box-shadow: 0 6px 16px rgba(228,131,117,.32);
-    }
-    .partner-headstart__step p {
-      font-size: 1rem;
-      color: var(--text);
-      line-height: 1.65;
-      margin: 0;
-    }
-    .partner-headstart__close {
-      max-width: 720px;
-      margin: 0 auto;
-      font-size: clamp(1.15rem, 1.95vw, 1.55rem);
-      color: var(--navy);
-      line-height: 1.5;
-      font-weight: 500;
-    }
-
-    /* Decorative blue glow behind the headline */
-    .partner-headstart::before {
-      content: '';
-      position: absolute;
-      top: -120px;
-      right: -120px;
-      width: 380px;
-      height: 380px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(57,171,226,.14) 0%, transparent 70%);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    @media (max-width: 768px) {
-      .partner-headstart { padding: 64px 20px; }
-      .partner-headstart__steps {
-        grid-template-columns: 1fr;
-        gap: 14px;
-      }
-      .partner-headstart__step { padding: 24px 22px; }
-    }
-
-    /* ══════════════════════════════════
-       NARRATIVE SECTION 2.2 — Mid quote
-       (between ai-trio and mn-features)
-    ══════════════════════════════════ */
+    /* ══════════════════════════════════════
+       PARTNER MID-QUOTE — second personal touch from accountant
+    ══════════════════════════════════════ */
     .partner-midquote {
       background: var(--off);
       padding: clamp(72px, 9vw, 100px) 24px;
@@ -430,125 +551,38 @@
       border-radius: 50px;
       letter-spacing: -.005em;
     }
-    @media (max-width: 768px) {
-      .partner-midquote__inner {
-        flex-direction: column;
-        text-align: center;
-        gap: 24px;
-      }
-      .partner-midquote__photo { width: 104px; height: 104px; }
-    }
 
-    /* ══════════════════════════════════
-       NARRATIVE SECTION 2.3 — Summary CTA
-       (between FAQ and mn-contact form)
-    ══════════════════════════════════ */
-    .partner-summary {
-      background: linear-gradient(180deg, var(--white) 0%, var(--off) 100%);
-      padding: clamp(72px, 9vw, 100px) 24px;
-      text-align: center;
+    /* ══════════════════════════════════════
+       FORM NOTE — small "הופנית על ידי X" above submit
+    ══════════════════════════════════════ */
+    .partner-form-note {
       font-family: 'Rubik', sans-serif;
+      font-size: .85rem;
+      color: rgba(255,255,255,.9);
+      text-align: center;
+      margin: 4px 0 0;
     }
-    .partner-summary__inner {
-      max-width: 760px;
-      margin: 0 auto;
-    }
-    .partner-summary__photo {
-      width: 88px;
-      height: 88px;
-      border-radius: 50%;
-      object-fit: cover;
-      background: linear-gradient(135deg, #d8e8f2, #b8cfdc);
-      border: 4px solid var(--white);
-      box-shadow: 0 10px 26px rgba(12,64,104,.18);
-      margin: 0 auto 24px;
-      display: block;
-    }
-    .partner-summary__headline {
-      font-size: clamp(1.8rem, 3.6vw, 2.8rem);
-      color: var(--navy);
-      font-weight: 700;
-      line-height: 1.2;
-      letter-spacing: -.02em;
-      margin: 0 0 14px;
-    }
-    .partner-summary__headline strong {
-      color: var(--salmon);
-      font-weight: 700;
-    }
-    .partner-summary__signature {
-      font-size: 1rem;
-      color: var(--muted);
-      margin: 0 0 36px;
-    }
-    .partner-summary__signature strong {
-      color: var(--navy);
-      font-weight: 700;
-    }
-    .partner-summary__badge {
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 6px;
-      padding: 3px 10px 4px;
-      font-size: .72rem;
-      font-weight: 700;
-      color: var(--white);
-      background: var(--salmon);
-      border-radius: 50px;
-      letter-spacing: -.005em;
-    }
-    .partner-summary__cta {
-      font-size: 1.05rem;
-      padding: 16px 40px;
-      box-shadow: 0 10px 28px rgba(228,131,117,.32);
+    .partner-form-note strong { color: var(--white); font-weight: 700; }
+
+    /* Small note below the submit button */
+    .webinar-form-confirm {
+      font-family: 'Rubik', sans-serif;
+      font-size: .85rem;
+      color: rgba(255,255,255,.75);
+      text-align: center;
+      margin: 14px 0 0;
+      line-height: 1.5;
     }
 
-    /* ══════════════════════════════════
-       PARTNER-MODE OVERRIDES
-       Only apply when JS has confirmed a valid ?ref= and added the
-       .has-partner class to <body>. Smooths the visual flow when the
-       partner narrative is on top of the original hak.co.il content.
-    ══════════════════════════════════ */
-
-    /* The "HK.AI מציגה" lead-in feels like a fresh page start after the
-       partner bridge — hide it so the bridge transitions smoothly into
-       the headline. */
-    body.has-partner .mn-hero__logo-block { display: none !important; }
-
-    /* "איך זה עובד ביומיום" was navy/dark in the original — flip to white
-       so the rhythm stays light and the salmon accents do the heavy
-       lifting in this partner-narrated flow. */
-    body.has-partner .mn-features {
-      background: var(--white) !important;
-    }
-    body.has-partner .mn-features .mn-section-title {
-      color: var(--navy) !important;
-    }
-    body.has-partner .mn-features .ai-section-divider-title,
-    body.has-partner .mn-features .ai-section-divider-title--light {
-      color: var(--blue) !important;
-    }
-    body.has-partner .mn-features .ai-section-divider-title::before,
-    body.has-partner .mn-features .ai-section-divider-title::after,
-    body.has-partner .mn-features .ai-section-divider-title--light::before,
-    body.has-partner .mn-features .ai-section-divider-title--light::after {
-      background: var(--blue) !important;
-      opacity: .35 !important;
-    }
-    body.has-partner .ai-how-step {
-      background: var(--off) !important;
-      border: 1px solid var(--border) !important;
-    }
-    body.has-partner .ai-how-step h3 { color: var(--navy) !important; }
-    body.has-partner .ai-how-step p { color: var(--muted) !important; }
-
-    /* Tablet (≤ 1024px) — narrower padding */
+    /* ══════════════════════════════════════
+       RESPONSIVE
+    ══════════════════════════════════════ */
     @media (max-width: 1024px) {
       .partner-hero__text { padding: 56px 48px; }
       .partner-hero__photo-wrap { flex: 0 0 42%; }
+      .webinar-card__details { grid-template-columns: 1fr; }
     }
 
-    /* Mobile (≤ 768px) — vertical stack, photo on top */
     @media (max-width: 768px) {
       .partner-hero {
         min-height: auto;
@@ -561,17 +595,30 @@
         min-height: 50vh;
         width: 100%;
       }
-      .partner-hero__text {
-        padding: 36px 24px 44px;
-      }
+      .partner-hero__text { padding: 36px 24px 44px; }
       .partner-hero__name { font-size: clamp(2.1rem, 9vw, 3rem); }
       .partner-hero__role { font-size: 1.15rem; }
       .partner-hero__quote {
         font-size: clamp(1.2rem, 4.5vw, 1.5rem);
         padding-right: 16px;
-        margin: 28px 0 22px;
+        margin: 24px 0 20px;
       }
-      .partner-hero__brand { height: 44px; }
+      .partner-hero__invite {
+        padding: 18px 18px 20px;
+        margin: 22px 0 24px;
+      }
+      .partner-hero__invite-title { font-size: 1.15rem; }
+      .partner-hero__invite-meta {
+        flex-direction: column;
+        gap: 10px;
+        font-size: .9rem;
+      }
+      .partner-hero__cta {
+        align-self: stretch;
+        text-align: center;
+        font-size: 1rem;
+        padding: 16px 32px;
+      }
       .partner-hero__placeholder-badge {
         top: 20px;
         padding: 12px 22px;
@@ -581,6 +628,23 @@
         text-align: center;
         line-height: 1.4;
       }
+
+      .webinar-card { padding: 32px 26px; border-radius: 22px; }
+      .webinar-card__details { grid-template-columns: 1fr; gap: 12px; }
+      .webinar-card__cta { font-size: 1rem; padding: 16px 36px; }
+
+      .webinar-benefits__list { grid-template-columns: 1fr; gap: 14px; }
+
+      .webinar-hosts__grid { grid-template-columns: 1fr; gap: 18px; }
+      .webinar-host { padding: 28px 24px 26px; }
+      .webinar-host__photo { width: 110px; height: 110px; }
+
+      .partner-midquote__inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 24px;
+      }
+      .partner-midquote__photo { width: 104px; height: 104px; }
     }
   </style>
 </head>
@@ -591,15 +655,14 @@
     <div class="mn-wrap">
       <nav class="mn-nav">
         <a href="#" class="mn-logo">
-          <img src="assets/hkmoneylogo.png" alt="HK Money AI" class="mn-logo__img" />
+          <img src="assets/hkmoneylogo.png" alt="HK Money" class="mn-logo__img" />
         </a>
         <ul class="mn-nav__links" id="mn-nav-links">
-          <li><a href="#trio">מה זה HK Money?</a></li>
-          <li><a href="#how">איך זה עובד?</a></li>
-          <li><a href="#demo">ככה זה נראה</a></li>
-          <li><a href="#testimonials">מה אומרים עלינו</a></li>
-          <li><a href="https://studio.hak.co.il" target="_blank">מערכת היועצים</a></li>
-          <li><a href="#contact" class="mn-btn mn-btn--salmon mn-nav__cta">אני רוצה ליווי כזה</a></li>
+          <li><a href="#webinar">פרטי הוובינר</a></li>
+          <li><a href="#benefits">מה תקבלו</a></li>
+          <li><a href="#hosts">המנחים</a></li>
+          <li><a href="#faq">שאלות נפוצות</a></li>
+          <li><a href="#contact" class="mn-btn mn-btn--salmon mn-nav__cta">שריין מקום</a></li>
         </ul>
         <button class="mn-nav__toggle" id="mn-toggle" aria-label="תפריט">
           <span></span><span></span><span></span>
@@ -609,9 +672,10 @@
   </header>
 
   <!-- ══════════════════════════════════
-       PARTNER HERO — heroic full-bleed section before hak.co.il's own Hero.
-       Populated by JS only when ?ref=<key> matches partners-data.json.
-       Hidden by default.
+       PARTNER HERO — full invitation card.
+       Photo + accountant intro + webinar details + register CTA, all in
+       one above-the-fold experience. Feels like a personal invitation.
+       Hidden by default. Revealed by JS only when ?ref=<key> matches.
   ══════════════════════════════════ -->
   <section class="partner-hero" id="partner-hero" hidden>
     <div class="partner-hero__inner">
@@ -620,21 +684,163 @@
         <img src="" alt="" class="partner-hero__photo" id="partner-hero-photo" />
       </div>
       <div class="partner-hero__text">
-        <span class="partner-hero__label">מומלץ על ידי</span>
+        <span class="partner-hero__label">מזמין אותך לוובינר</span>
         <h1 class="partner-hero__name" id="partner-hero-name"></h1>
         <p class="partner-hero__role"><span id="partner-hero-role"></span> <span class="partner-hero__credential">HK Elite Partner</span></p>
         <blockquote class="partner-hero__quote" id="partner-hero-quote"></blockquote>
-        <hr class="partner-hero__divider" />
-        <span class="partner-hero__intro-label">ממליץ לך להכיר:</span>
-        <img src="assets/hkmoneylogo.png" alt="HK Money" class="partner-hero__brand" />
-        <a href="#home" class="mn-btn mn-btn--salmon partner-hero__cta">תראה למה ←</a>
+
+        <div class="partner-hero__invite">
+          <p class="partner-hero__invite-eyebrow">פרטי הוובינר</p>
+          <h2 class="partner-hero__invite-title">AI לעסקים קטנים — איך לא להישאר מאחור</h2>
+          <ul class="partner-hero__invite-meta">
+            <li>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V10h14v10zM5 8V6h14v2H5z"/></svg>
+              <span>[תאריך]</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/></svg>
+              <span>[שעה]</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 6h-7.6l1.4-3.6L14.1 2 11.5 7H3a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1zm-1 12H4V8h16v10z"/><path d="M14.5 13l-4 2.5v-5z"/></svg>
+              <span>זום · 60 דק'</span>
+            </li>
+          </ul>
+        </div>
+
+        <a href="#contact" class="mn-btn mn-btn--salmon partner-hero__cta">שריין מקום בזום</a>
+        <p class="partner-hero__cta-note">חינם · מקומות מוגבלים</p>
       </div>
     </div>
   </section>
 
   <!-- ══════════════════════════════════
-       NARRATIVE 2.1 — BRIDGE
-       Reframes the accountant as a forward-thinking technologist.
+       WEBINAR CARD — date, time, format, register CTA
+  ══════════════════════════════════ -->
+  <section class="webinar-card-section" id="webinar">
+    <div class="webinar-card">
+      <span class="webinar-card__tag">וובינר חי · חינם · מקומות מוגבלים</span>
+      <h2 class="webinar-card__title">
+        AI לעסקים קטנים —<br/>
+        איך לא להישאר מאחור
+      </h2>
+      <p class="webinar-card__subtitle">
+        וובינר בלעדי ללקוחות של <strong id="webinar-partner-name">רואה החשבון שלך</strong>
+      </p>
+
+      <div class="webinar-card__details">
+        <div class="webinar-card__detail">
+          <div class="webinar-card__detail-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V10h14v10zM5 8V6h14v2H5zm2 4h5v5H7v-5z"/></svg>
+          </div>
+          <div>
+            <p class="webinar-card__detail-label">תאריך</p>
+            <p class="webinar-card__detail-value">[יוגדר בתיאום]</p>
+          </div>
+        </div>
+        <div class="webinar-card__detail">
+          <div class="webinar-card__detail-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/></svg>
+          </div>
+          <div>
+            <p class="webinar-card__detail-label">שעה</p>
+            <p class="webinar-card__detail-value">[יוגדר בתיאום]</p>
+          </div>
+        </div>
+        <div class="webinar-card__detail">
+          <div class="webinar-card__detail-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 6h-7.6l1.4-3.6L14.1 2 11.5 7H3a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1zm-1 12H4V8h16v10z"/><path d="M14.5 13l-4 2.5v-5z"/></svg>
+          </div>
+          <div>
+            <p class="webinar-card__detail-label">פורמט</p>
+            <p class="webinar-card__detail-value">לייב בזום · 60 דק'</p>
+          </div>
+        </div>
+      </div>
+
+      <a href="#contact" class="mn-btn mn-btn--salmon webinar-card__cta">שריין מקום בזום</a>
+      <span class="webinar-card__free-note">חינם · ללא התחייבות · מקומות מוגבלים</span>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       WEBINAR BENEFITS — what you'll get
+  ══════════════════════════════════ -->
+  <section class="webinar-benefits" id="benefits">
+    <div class="webinar-benefits__inner">
+      <div class="webinar-benefits__header">
+        <h2 class="webinar-benefits__title">
+          60 דקות שישנו את איך<br/>
+          <span class="accent">שאתה רואה את העסק שלך</span>
+        </h2>
+      </div>
+
+      <div class="webinar-benefits__list">
+        <div class="webinar-benefit">
+          <div class="webinar-benefit__check"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></div>
+          <div class="webinar-benefit__body">
+            <h3 class="webinar-benefit__title">הבנה אמיתית מה ה-AI יכול לעשות לעסק שלך</h3>
+            <p class="webinar-benefit__text">בלי באז, בלי הבטחות שווא — מה באמת עובד היום, ולמי זה מתאים.</p>
+          </div>
+        </div>
+
+        <div class="webinar-benefit">
+          <div class="webinar-benefit__check"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></div>
+          <div class="webinar-benefit__body">
+            <h3 class="webinar-benefit__title">4-5 כלים פרקטיים לשימוש כבר מחר</h3>
+            <p class="webinar-benefit__text">לא תיאוריה — דברים קונקרטיים שתוכל להפעיל בעסק תוך שעה אחרי הוובינר.</p>
+          </div>
+        </div>
+
+        <div class="webinar-benefit">
+          <div class="webinar-benefit__check"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></div>
+          <div class="webinar-benefit__body">
+            <h3 class="webinar-benefit__title">הצצה למוצר חדש לעסקים קטנים בישראל</h3>
+            <p class="webinar-benefit__text">HK Money — מערכת ניהול תזרים פיננסי שנבנתה במיוחד לעסקים שאין להם מנהל כספים פנימי.</p>
+          </div>
+        </div>
+
+        <div class="webinar-benefit">
+          <div class="webinar-benefit__check"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></div>
+          <div class="webinar-benefit__body">
+            <h3 class="webinar-benefit__title">מתנה: 2 שבועות ניסיון של HK Money</h3>
+            <p class="webinar-benefit__text">בלעדי למשתתפי הוובינר. ללא התחייבות, ללא כרטיס אשראי. מתנה אישית.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       HOSTS — Eyal & Ofir
+  ══════════════════════════════════ -->
+  <section class="webinar-hosts" id="hosts">
+    <div class="webinar-hosts__inner">
+      <div class="webinar-hosts__header">
+        <span class="webinar-hosts__label">מי מנחים</span>
+        <h2 class="webinar-hosts__title">המומחים שמנחים את הוובינר</h2>
+      </div>
+
+      <div class="webinar-hosts__grid">
+        <div class="webinar-host">
+          <img src="assets/eyal3.png" alt="אייל חזות" class="webinar-host__photo" />
+          <h3 class="webinar-host__name">אייל חזות</h3>
+          <p class="webinar-host__role">מייסד Bizibox</p>
+          <p class="webinar-host__bio">מומחה לטכנולוגיה ו-AI בעסקים, 20+ שנות ניסיון בליווי עסקים בישראל. ייסד את Bizibox המשרתת עשרות אלפי עסקים.</p>
+        </div>
+
+        <div class="webinar-host">
+          <img src="assets/ofir3.png" alt="אופיר קריספין" class="webinar-host__photo" />
+          <h3 class="webinar-host__name">אופיר קריספין</h3>
+          <p class="webinar-host__role">רואה חשבון, לשעבר CFO</p>
+          <p class="webinar-host__bio">מומחה לניהול תזרים ובניית אסטרטגיה כלכלית לעסקים קטנים ובינוניים. כיהן כסמנכ"ל כספים בחברות מובילות במשק.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       PARTNER BRIDGE — "למה X שלח אותך לכאן?"
        Hidden by default. Revealed by JS only when ?ref=<key> matches.
   ══════════════════════════════════ -->
   <section class="partner-bridge" id="partner-bridge" hidden>
@@ -642,647 +848,81 @@
       <span class="partner-bridge__label">למה <span data-partner-firstname></span> שלח אותך לכאן?</span>
       <div class="partner-bridge__body">
         <p>רואה חשבון של היום הוא גם איש טכנולוגיה.</p>
-        <p><span data-partner-firstname></span> לא הסתפק במסים ודוחות — הוא בחר ללוות אותך גם בעולם החדש: של AI, של תזרים בזמן אמת, של החלטות מבוססות דאטה.</p>
-        <p><span class="partner-bridge__highlight">לא כל רואה חשבון בוחר בדרך הזו. <span data-partner-firstname></span> כן.</span></p>
-        <p>זה אומר שלך יש משהו שלרוב העסקים אין:<br/>רואה חשבון שמוביל את העתיד, לא רץ אחריו.</p>
+        <p><span data-partner-firstname></span> לא הסתפק במסים ודוחות — הוא בחר להזמין אותך לחוויה שתפתח לך עיניים על העתיד של ניהול עסק קטן.</p>
+        <p><span class="partner-bridge__highlight">לא כל רואה חשבון מארח וובינר כזה. <span data-partner-firstname></span> כן.</span></p>
       </div>
     </div>
   </section>
 
   <!-- ══════════════════════════════════
-       NARRATIVE 2.1.5 — HEADSTART
-       The unfair advantage: Israel briefs us on the business before
-       day one. The AI starts with years of context, not from scratch.
-       This is the section that makes the accountant the hero of the
-       page — his knowledge becomes the warm-start for the system.
-       Hidden by default. Revealed by JS only when ?ref=<key> matches.
-  ══════════════════════════════════ -->
-  <section class="partner-headstart" id="partner-headstart" hidden>
-    <div class="partner-headstart__inner">
-      <span class="partner-headstart__label">היתרון שלך — להגיע מ<span data-partner-firstname></span></span>
-      <h2 class="partner-headstart__headline">
-        לא מתחילים מאפס.<br/>
-        <span class="partner-headstart__highlight">מתחילים עם שנים של ידע.</span>
-      </h2>
-      <div class="partner-headstart__intro">
-        <p><span data-partner-firstname></span> מכיר את העסק שלך כבר שנים.</p>
-        <p>הוא יודע מתי הלקוח הגדול שלך מאחר.</p>
-        <p>הוא יודע איך נראה החודש החזק והחודש החלש.</p>
-        <p>איפה אתה דחוס, ואיפה יש לך מרווח.</p>
-        <p class="partner-headstart__pivot">הידע הזה היה בראש שלו בלבד. עד עכשיו.</p>
-      </div>
-      <div class="partner-headstart__steps">
-        <div class="partner-headstart__step">
-          <div class="partner-headstart__step-num">1</div>
-          <p><span data-partner-firstname></span> מעביר לנו תקציר על העסק שלך — דפוסים, סיכונים, הזדמנויות.</p>
-        </div>
-        <div class="partner-headstart__step">
-          <div class="partner-headstart__step-num">2</div>
-          <p>ה-AI שלנו לומד את ההקשר. לפני שאתה אפילו פותח וואטסאפ.</p>
-        </div>
-        <div class="partner-headstart__step">
-          <div class="partner-headstart__step-num">3</div>
-          <p>ביום הראשון, כשאתה שואל "כמה כסף יהיה לי?" — התשובה כבר מבינה את העסק שלך.</p>
-        </div>
-      </div>
-      <p class="partner-headstart__close">
-        זה לא AI גנרי שלומד ממך לאט-לאט.<br/>
-        <span class="partner-headstart__highlight">זה AI שיודע מי אתה — מהיום הראשון.</span>
-      </p>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════
-       HERO
-  ══════════════════════════════════ -->
-  <section class="mn-hero" id="home">
-    <div class="mn-hero__bg-wrap">
-      <img src="assets/money-bg.jpg" alt="" class="mn-hero__bg-img" />
-    </div>
-    <div class="mn-hero__white-bottom"></div>
-    <div class="mn-hero__inner">
-      <div class="mn-hero__logo-block">
-        <img src="assets/hkai.png" alt="HK.AI מציגה: HK Money" class="mn-hero__logo-img" />
-      </div>
-      <h1 class="mn-hero__headline">
-        ליווי פיננסי שבאמת שולט על <span class="mn-hero__accent">התזרים שלך</span><br/>
-        בעזרת מנהל תזרים אישי, יועץ פיננסי<br/>
-        ומערכת AI שעונה על כל שאלה.
-      </h1>
-      <a href="#contact" class="mn-btn mn-btn--salmon mn-hero__cta">אני רוצה ליווי כזה</a>
-      <div class="mn-hero__images mn-hero__images--chat-only">
-        <div class="mn-hero__chat-wrap">
-          <img src="assets/whats1.png" alt="AI תזרים בוואטסאפ" class="mn-hero__chat-img" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════
-       PROBLEM
-  ══════════════════════════════════ -->
-  <section class="ai-problem">
-    <div class="mn-wrap">
-      <div class="ai-problem__header">
-        <div class="ai-section-divider-title">הבעיה שכולם מכירים</div>
-        <!-- Default headline — used when no ?ref= partner is active.
-             Conflicts with a partner referral context (it disparages the
-             "accountant's reports"), so JS swaps it for the partner-safe
-             version below when has-partner activates. -->
-        <h2 class="mn-section-title mn-section-title--center" id="problem-title-default">
-          הדוחות של רואה החשבון שלך נראים טוב<br/>
-          <span class="mn-accent-salmon">אבל הבנק מספר סיפור אחר.</span>
-        </h2>
-        <h2 class="mn-section-title mn-section-title--center" id="problem-title-partner" hidden>
-          הדוחות מסכמים את אתמול.<br/>
-          <span class="mn-accent-salmon">אבל מה יקרה מחר?</span>
-        </h2>
-      </div>
-      <div class="ai-problem__list">
-
-        <div class="ai-problem__item">
-          <span class="ai-problem__item-num">01</span>
-          <div class="ai-problem__item-body">
-            <h3 class="ai-problem__item-title">חוסר וודאות</h3>
-            <p class="ai-problem__item-sub">אתה לא באמת יודע איך ייראה החשבון בעוד כמה ימים וכמה כסף יישאר בסוף החודש.</p>
-          </div>
-        </div>
-
-        <div class="ai-problem__item">
-          <span class="ai-problem__item-num">02</span>
-          <div class="ai-problem__item-body">
-            <h3 class="ai-problem__item-title">כסף יוצא לפני שנכנס</h3>
-            <p class="ai-problem__item-sub">ספקים, משכורות והתחייבויות — וההכנסות מגיעות מאוחר יותר, ואז נוצר לחץ תמידי על הבנק.</p>
-          </div>
-        </div>
-
-        <div class="ai-problem__item">
-          <span class="ai-problem__item-num">03</span>
-          <div class="ai-problem__item-body">
-            <h3 class="ai-problem__item-title">חריגות שמתגלות בדיעבד</h3>
-            <p class="ai-problem__item-sub">כשהשליטה מגיעה מאוחר מדי — העלות היא ריביות יקרות, פגיעה בדירוג האשראי וכאב ראש אחד גדול.</p>
-          </div>
-        </div>
-
-      </div>
-      <div class="ai-problem__stats">
-        <div class="ai-problem__stat">
-          <span class="ai-problem__num">82%</span>
-          <span class="ai-problem__label">מהעסקים שנסגרים – נסגרים בגלל בעיות תזרים, לא חוסר רווחיות</span>
-        </div>
-        <div class="ai-problem__stat">
-          <span class="ai-problem__num">1 מתוך 3</span>
-          <span class="ai-problem__label">בעלי עסקים לא יודעים מה תהיה היתרה שלהם בעוד שבועיים</span>
-        </div>
-      </div>
-      <div class="ai-problem__cta">
-        <a href="#trio" class="mn-btn mn-btn--navy">תספרו לי עוד</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════
-       TRIO – THE CORE DIFFERENTIATOR
-  ══════════════════════════════════ -->
-  <section class="ai-trio" id="trio">
-    <div class="mn-wrap">
-      <div class="ai-trio__header">
-        <div class="ai-section-divider-title">מה הופך את HK לשונה</div>
-        <h2 class="mn-section-title mn-section-title--center">
-          לא רק טכנולוגיה. לא רק ייעוץ.<br />
-          <span class="mn-accent-salmon">ניהול פיננסי שמחבר בין הכול.</span>
-        </h2>
-        <p class="ai-trio__sub">ברוב הפתרונות תקבל מערכת או הכוונה — כאן זה מגיע יחד, עם ניהול יומי בפועל.</p>
-      </div>
-
-      <div class="ai-trio__grid">
-
-        <!-- שכבה 1: מנהל תזרים אנושי -->
-        <div class="ai-trio__card ai-trio__card--manager">
-          <div class="ai-trio__card-badge">01</div>
-          <div class="ai-trio__card-icon">
-            <img src="assets/hand.png" alt="מנהל תזרים" />
-          </div>
-          <h3>מנהל תזרים אנושי צמוד</h3>
-          <p class="ai-trio__role-label">העיניים שלך על הכסף</p>
-          <ul class="ai-trio__list">
-            <li>מנהל תזרים אמיתי – בן אדם</li>
-            <li>בקרה ופיקוח יומיומי על תנועות הכסף</li>
-            <li>אחראי על הדיוק – לא רק "מייעץ"</li>
-            <li>שקט נפשי מוחלט</li>
-          </ul>
-        </div>
-
-        <!-- שכבה 2: כלכלן אסטרטגי -->
-        <div class="ai-trio__card ai-trio__card--advisor">
-          <div class="ai-trio__card-badge">02</div>
-          <div class="ai-trio__card-icon">
-            <img src="assets/graf.png" alt="יועץ פיננסי" />
-          </div>
-          <h3>ליווי יועץ פיננסי</h3>
-          <p class="ai-trio__role-label">המוח שמאחורי הצמיחה</p>
-          <ul class="ai-trio__list">
-            <li>פגישה חודשית על תוצאות העסק</li>
-            <li>חיבור בין רווח לתזרים</li>
-            <li>זיהוי בעיות לפני שהן גדלות</li>
-            <li>בניית כיוון כלכלי לעסק</li>
-          </ul>
-        </div>
-
-        <!-- שכבה 3: AI -->
-        <div class="ai-trio__card ai-trio__card--ai">
-          <div class="ai-trio__card-badge">03</div>
-          <div class="ai-trio__card-icon">
-            <img src="assets/robot.png" alt="AI" />
-          </div>
-          <h3>מענה AI מיידי בוואטסאפ</h3>
-          <p class="ai-trio__role-label">התשובות שלך בכיס</p>
-          <ul class="ai-trio__list">
-            <li>"כמה קניתי מספק X החודש?"</li>
-            <li>"מה המגמה בהכנסות שלי?"</li>
-            <li>"מה הרווח התזרימי שלי?"</li>
-            <li>"תן לי תחזית תזרים לחודש הבא"</li>
-          </ul>
-        </div>
-
-      </div>
-
-      <div class="ai-trio__connector">
-        <div class="ai-trio__connector-text">
-          שלושתם מתקשרים ביניהם – כל יום – כך שתמיד יש מישהו שמסתכל על הכסף שלך
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════
-       HOW IT WORKS
-  ══════════════════════════════════ -->
-  <section class="mn-features" id="how">
-    <div class="mn-wrap">
-      <div class="mn-features__header">
-        <div class="ai-section-divider-title ai-section-divider-title--light">איך זה עובד ביומיום?</div>
-        <h2 class="mn-section-title mn-section-title--center">
-          כל יום – בלי שתעשה כלום<br />
-          <span class="mn-accent-salmon">הכסף שלך מנוהל</span>
-        </h2>
-      </div>
-      <div class="ai-how-grid">
-        <div class="ai-how-step">
-          <div class="ai-how-step__num">01</div>
-          <h3>לילה – AI עובד</h3>
-          <p>בזמן שאתה ישן, מנוע ה-AI שמכיר את העסק שלך מושך נתונים מחשבונות הבנק ומכרטיסי האשראי, מנתח כל תנועה, ומכין סיכום למנהל התזרים האישי שלך על מה שחשוב באמת.</p>
-        </div>
-        <div class="ai-how-arrow">←</div>
-        <div class="ai-how-step">
-          <div class="ai-how-step__num">02</div>
-          <h3>בוקר — מנהל התזרים מעדכן</h3>
-          <p>מנהל התזרים האישי שלך עובר על הנתונים, מוודא דיוק, מעדכן תחזית ומתריע על כל דבר חריג.</p>
-        </div>
-        <div class="ai-how-arrow">←</div>
-        <div class="ai-how-step">
-          <div class="ai-how-step__num">03</div>
-          <h3>אתה – רק מסתכל</h3>
-          <p>פותח וואטסאפ, רואה עדכון יומי מסודר. שואל שאלה – מקבל תשובה. הכסף מנוהל.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════
-       FEATURES  (5 cards from Figma 2018-4318)
-  ══════════════════════════════════ -->
-
-  <!-- ══════════════════════════════════
-       DEMO – phone with real image
-  ══════════════════════════════════ -->
-  <section class="mn-demo" id="demo">
-    <div class="mn-demo__bg-img" aria-hidden="true"></div>
-    <div class="mn-wrap mn-demo__inner">
-      <div class="mn-demo__text">
-        <h2 class="mn-section-title">
-          כל בוקר מגיע עדכון<br />
-          <span class="mn-accent-blue">לוואטסאפ שלך</span>
-        </h2>
-        <p class="mn-demo__body">המנהל עיבד. ה-AI ניתח. הכל מסודר ומחכה לך – יתרה, תנועות, תחזית, והתראות.</p>
-        <div class="mn-demo__features">
-          <div class="mn-demo__feat">
-            <img src="assets/Financial reports.png" class="mn-demo__feat-icon" alt="" />
-            <div>
-              <strong>עדכון תזרים יומי</strong>
-              <p>יתרת עו"ש נוכחית + חריגות צפויות ממסגרות + מה יקרה קדימה בתזרים</p>
-            </div>
-          </div>
-          <div class="mn-demo__feat">
-            <img src="assets/Recommendations.png" class="mn-demo__feat-icon" alt="" />
-            <div>
-              <strong>התראות לקוחות וספקים</strong>
-              <p>לקוח חייב לך כסף? שכחת לשלם לספק? — כל בוקר התראה על תכנון שלא קרה בפועל.</p>
-            </div>
-          </div>
-          <div class="mn-demo__feat">
-            <img src="assets/Planing.png" class="mn-demo__feat-icon" alt="" />
-            <div>
-              <strong>שליטה ביעדים ובתקציב בזמן אמת</strong>
-              <p>כל בוקר תדע אם אתה עומד ביעדים שהגדרנו כדי לשמור על תזרים חיובי</p>
-            </div>
-          </div>
-          <div class="mn-demo__feat">
-            <img src="assets/Automation.png" class="mn-demo__feat-icon" alt="" />
-            <div>
-              <strong>שאל את ה-AI — כל שאלה פיננסית</strong>
-              <p>תשובה תוך שנייה ממערכת מנוהלת על ידי בן אדם</p>
-            </div>
-          </div>
-        </div>
-        <a href="#contact" class="mn-btn mn-btn--navy">אני רוצה ככה לנהל את הכסף שלי</a>
-      </div>
-      <div class="mn-demo__phone">
-        <div class="wa-chat-card">
-          <div class="wa-chat-card__body">
-            <div class="wa-chat-card__msg wa-chat-card__msg--out">
-              <div class="wa-chat-card__bubble wa-chat-card__bubble--out">האם צפויה לי חריגה החודש בחשבון?</div>
-              <span class="wa-chat-card__time">12:21 ✓✓</span>
-            </div>
-            <div class="wa-chat-card__msg wa-chat-card__msg--in">
-              <div class="wa-chat-card__bubble wa-chat-card__bubble--in">
-                <div class="wa-cf__title">חברת לדוגמה בע"מ</div>
-                <div class="wa-cf__subtitle">תחזית תזרים שבועית</div>
-                <div class="wa-cf__date-line">נכון לבוקר יום ב׳, 26.3.2026</div>
-                <div class="wa-cf__balance-line">יתרת עו"ש נוכחית: <strong>75,187 ₪</strong></div>
-                <div class="wa-cf__divider"></div>
-                <div class="wa-cf__note">• פעולות שצפינו ועוד לא קרו</div>
-                <div class="wa-cf__item wa-cf__item--out">תשלום לספק מזון מרכזי<span>-25,000</span></div>
-                <div class="wa-cf__item wa-cf__item--out">העברה לקרן פנסיה עובדים<span>-12,639</span></div>
-                <div class="wa-cf__day-header">יום ב׳ – 27.3.2026</div>
-                <div class="wa-cf__item wa-cf__item--in">הכנסות מסליקה<span>+4,105</span></div>
-                <div class="wa-cf__item wa-cf__item--in">תשלום מלקוח עסקי<span>+864</span></div>
-                <div class="wa-cf__item wa-cf__item--out">משכורות עובדים<span>-65,000</span></div>
-                <div class="wa-cf__eod wa-cf__eod--neg">יתרה סוף יום: <strong>-61,258 ₪</strong></div>
-                <div class="wa-cf__day-header">יום ג׳ – 28.3.2026</div>
-                <div class="wa-cf__item wa-cf__item--in">הכנסות מסליקה<span>+667</span></div>
-                <div class="wa-cf__item wa-cf__item--out">ספק משקאות גדול<span>-4,000</span></div>
-              </div>
-              <span class="wa-chat-card__time">08:14</span>
-            </div>
-            <div class="wa-chat-card__msg wa-chat-card__msg--out">
-              <div class="wa-chat-card__bubble wa-chat-card__bubble--out">איך אני מול התקציב החודש?</div>
-              <span class="wa-chat-card__time">08:15 ✓✓</span>
-            </div>
-            <div class="wa-chat-card__msg wa-chat-card__msg--in">
-              <div class="wa-chat-card__bubble wa-chat-card__bubble--in">
-                <div class="wa-cf__title">מעקב תקציב – מרץ 2026</div>
-                <div class="wa-cf__date-line">עברו 26 מתוך 31 ימים (84%)</div>
-                <div class="wa-cf__divider"></div>
-                <div class="wa-cf__item wa-cf__item--out">הוצאות בפועל<span>87,450 ₪</span></div>
-                <div class="wa-cf__item">יעד חודשי<span style="color:#0c4068;font-weight:700">95,000 ₪</span></div>
-                <div class="wa-cf__divider"></div>
-                <div class="wa-cf__eod wa-cf__eod--pos">נותר בתקציב: <strong>7,550 ₪ ✅</strong></div>
-                <div class="wa-cf__note" style="margin-top:6px">אתה מתנהל יפה – בקצב הנוכחי תסגור את החודש מתחת ליעד.</div>
-              </div>
-              <span class="wa-chat-card__time">08:15</span>
-            </div>
-          </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════
-       NARRATIVE 2.2 — MID QUOTE
-       The accountant's practice-evolution story — placed AFTER demo so
-       the reader has just seen the AI answer in action, and now hears
-       the accountant explain how he chose to integrate this into his
-       practice. Positions him as a deliberate, modern professional.
+       PARTNER MID-QUOTE — second personal touch
        Hidden by default. Revealed by JS only when ?ref=<key> matches.
   ══════════════════════════════════ -->
   <section class="partner-midquote" id="partner-midquote" hidden>
     <div class="partner-midquote__inner">
       <img src="" alt="" class="partner-midquote__photo" id="partner-midquote-photo" />
       <div class="partner-midquote__body">
-        <p class="partner-midquote__quote">לקוחות שלי שואלים אותי 'כמה כסף יהיה לי בסוף החודש?'. פעם זה לקח לי שעות לבדוק. היום אני שולח אותם לכאן — והם מקבלים תשובה תוך שנייה. ככה אני נותן יותר ערך, מהר יותר.</p>
+        <p class="partner-midquote__quote">אני שולח את הלקוחות שלי לוובינר הזה כי אני יודע שאחרי 60 דקות, הם יבינו דברים על העסק שלהם שאף יועץ אחר לא יראה להם.</p>
         <p class="partner-midquote__signature"><strong data-partner-fullname></strong>, רואה חשבון <span class="partner-midquote__badge">HK Elite Partner</span></p>
       </div>
     </div>
   </section>
 
   <!-- ══════════════════════════════════
-       PRICING
-  ══════════════════════════════════ -->
-  <section class="ai-pricing" id="pricing">
-    <div class="mn-wrap">
-      <div class="ai-pricing__header">
-        <div class="ai-section-divider-title">מסלולי ליווי</div>
-        <h2 class="mn-section-title mn-section-title--center">
-          בחר את המסלול<br/>
-          <span class="mn-accent-salmon">המתאים לעסק שלך</span>
-        </h2>
-      </div>
-
-      <div class="ai-pricing__grid">
-
-        <!-- Plan 1: HK Money -->
-        <div class="ai-pricing__card">
-          <div class="ai-pricing__plan-name"><img src="assets/hkmoneylogo.png" alt="HK Money" class="ai-pricing__logo" /></div>
-          <div class="ai-pricing__price">
-            <span class="ai-pricing__from">החל מ-</span>
-            <span class="ai-pricing__amount">749</span>
-            <span class="ai-pricing__currency">₪</span>
-            <span class="ai-pricing__vat">+ מע"מ / חודש</span>
-          </div>
-          <ul class="ai-pricing__features">
-            <li>ניהול תזרים אנושי יומיומי</li>
-            <li>עדכון תזרים בוואטסאפ כל בוקר</li>
-            <li>מענה AI מיידי 24/7</li>
-            <li>מעקב גבייה לקוחות ותשלומי ספקים</li>
-            <li>תחזית תזרים חודשית</li>
-            <li>דוח תוצאות חודשיות</li>
-            <li>ללא התחייבות</li>
-            <li>ללא עלויות הקמה</li>
-          </ul>
-          <a href="#contact" class="mn-btn mn-btn--navy mn-btn--full">מתחילים</a>
-        </div>
-
-        <!-- Plan 2: HK Money+ -->
-        <div class="ai-pricing__card ai-pricing__card--plus">
-          <div class="ai-pricing__badge">לוקחים את העסק קדימה</div>
-          <div class="ai-pricing__plan-name"><img src="assets/hkmoneylogo.png" alt="HK Money" class="ai-pricing__logo" /><span class="ai-pricing__plus">+</span></div>
-          <div class="ai-pricing__price">
-            <span class="ai-pricing__from">החל מ-</span>
-            <span class="ai-pricing__amount">1,249</span>
-            <span class="ai-pricing__currency">₪</span>
-            <span class="ai-pricing__vat">+ מע"מ / חודש</span>
-          </div>
-          <ul class="ai-pricing__features">
-            <li class="ai-pricing__feat--all-included">כל מרכיבי מסלול HK Money ✓</li>
-            <li>פגישה חודשית עם יועץ פיננסי</li>
-            <li>ניתוח תזרים, רווחיות ודוח תוצאות חודשיות</li>
-            <li>תרגום הנתונים להחלטות פרקטיות בעסק</li>
-            <li>המלצות פעולה לחודש הבא</li>
-          </ul>
-          <a href="#contact" class="mn-btn mn-btn--salmon mn-btn--full">מתחילים</a>
-        </div>
-
-      </div>
-
-      <p class="ai-pricing__note">ללא התחייבות · הדגמה חינמית · ביטול בכל עת</p>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════
-       TESTIMONIALS
-  ══════════════════════════════════ -->
-  <section class="mn-testimonials" id="testimonials">
-    <div class="mn-wrap">
-      <h2 class="mn-section-title mn-section-title--center mn-section-title--white">מה אומרים עלינו?</h2>
-      <p class="mn-testimonials__sub">אל תקשיבו לנו – תקשיבו לבעלי עסקים בדיוק כמוכם שכבר מנהלים את הכסף שלהם חכם</p>
-      <div class="mn-testimonials__track" id="mn-testimonials-track">
-        <div class="mn-testimonial-card">
-          <div class="mn-testimonial-card__stars">★★★★★</div>
-          <p class="mn-testimonial-card__quote">"לפני HK Money הייתי מנסה לנחש אם יש לי כסף לשלם משכורות. היום אני יודע 10 ימים קדימה. שינה לי את החיים."</p>
-          <p class="mn-testimonial-card__name">דני כהן</p>
-          <p class="mn-testimonial-card__role">בעל חברת ייבוא, 12 עובדים</p>
-        </div>
-        <div class="mn-testimonial-card">
-          <div class="mn-testimonial-card__stars">★★★★★</div>
-          <p class="mn-testimonial-card__quote">"הרו"ח שלי תמיד הראה רווח אבל הבנק היה ריק. HK Money הסבירה לי למה – ועזרה לי לתקן את זה."</p>
-          <p class="mn-testimonial-card__name">מיכל רוזנברג</p>
-          <p class="mn-testimonial-card__role">בעלת רשת קפה, 3 סניפים</p>
-        </div>
-        <div class="mn-testimonial-card">
-          <div class="mn-testimonial-card__stars">★★★★★</div>
-          <p class="mn-testimonial-card__quote">"ה-AI עונה לשאלות שהרו"ח גבה ממני שעתיים לענות עליהן. מה שחשבתי שלוקח הרבה זמן – עכשיו שנייה בוואטסאפ."</p>
-          <p class="mn-testimonial-card__name">אמיר שפירא</p>
-          <p class="mn-testimonial-card__role">קבלן שיפוצים, 8 עובדים</p>
-        </div>
-        <div class="mn-testimonial-card">
-          <div class="mn-testimonial-card__stars">★★★★★</div>
-          <p class="mn-testimonial-card__quote">"קיבלתי התראה שיש לי חריגה בהוצאות שיווק. בדקתי – היה חיוב כפול. חסכתי ₪3,400 בגלל התראה אחת."</p>
-          <p class="mn-testimonial-card__name">רחל גולן</p>
-          <p class="mn-testimonial-card__role">חנות אונליין, מחזור שנתי ₪2M</p>
-        </div>
-        <div class="mn-testimonial-card">
-          <div class="mn-testimonial-card__stars">★★★★★</div>
-          <p class="mn-testimonial-card__quote">"פעם הייתי מתעורר בלילה מדאגות על הכסף. היום אני יודע שמישהו מנהל את זה בשבילי – AI ואדם. ישן טוב יותר."</p>
-          <p class="mn-testimonial-card__name">יוסי לוי</p>
-          <p class="mn-testimonial-card__role">מסעדן, 2 סניפים</p>
-        </div>
-      </div>
-      <div class="mn-testimonials__nav">
-        <button class="mn-testimonials__arrow" id="mn-prev" aria-label="הקודם">&#8249;</button>
-        <button class="mn-testimonials__arrow" id="mn-next" aria-label="הבא">&#8250;</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════
-       ABOUT  (Figma 2044-13471)
-  ══════════════════════════════════ -->
-  <section class="ai-about" id="about">
-    <div class="ai-about__bg"></div>
-
-    <div class="mn-wrap ai-about__wrap">
-
-      <div class="ai-about__row">
-
-        <!-- Text side (right in RTL) -->
-        <div class="ai-about__text-col">
-          <h2 class="ai-about__title">הכירו את הפנים<br/>מאחורי <img src="assets/hkmoneylogo.png" alt="HK Money" class="ai-about__logo" /></h2>
-          <p class="ai-about__intro">את המערכת תכננו אנשים שחיים ונושמים עסקים בישראל, במיוחד מהכיוון הפיננסי. החזון, הלב וההבנה הטוטאלית מה בעלי עסקים בישראל צריכים, מגיעה משני אנשים – אייל חזות ואופיר קריספין.</p>
-          <div class="ai-about__bottom">
-            <p class="ai-about__bottom-line"><img src="assets/hkmoneylogo.png" alt="HK Money" class="ai-about__logo" /> מסתכל איתך קדימה!</p>
-            <a href="#contact" class="mn-btn mn-btn--salmon">אני רוצה ליווי כזה</a>
-          </div>
-        </div>
-
-        <!-- Two cards (left in RTL) – second card offset down -->
-        <div class="ai-about__cards-col">
-
-          <!-- אייל חזות -->
-          <div class="ai-about__card">
-            <div class="ai-about__card-body">
-              <div class="ai-about__card-header">
-                <img src="assets/eyal3.png" alt="אייל חזות" class="ai-about__photo" />
-                <h3 class="ai-about__name">אייל חזות</h3>
-              </div>
-              <p class="ai-about__bio">יזם ומומחה בעל שם בתחום הייעוץ העסקי, עם ניסיון עשיר בהובלת תהליכים אסטרטגיים וניהוליים בחברות בכל סדר גודל.<br/><br/>אייל הוא יזם בנשמה ממחה בתחום הייעוץ העסקי, בעל ניסיון בהובלת תהליכים אסטרטגיים והמייסד של ממשק הניהול הפיננסי הותיק – bizibox המשרת עשרות אלפי עסקים בישראל.<br/><br/>ה"אני מאמין" של אייל מתחשב בסיפור המיוחד של כל עסק, והצורך להתאים לכל אחד פתרון מקיף ומותאם אישית. מתוך האג'נדה הזו מגיעים המאפיינים ההיברידיים של HK Money המאפשרים היכרות והתאמה אישית.</p>
-            </div>
-          </div>
-
-          <!-- אופיר קריספין – offset -->
-          <div class="ai-about__card ai-about__card--offset">
-            <div class="ai-about__card-body">
-              <div class="ai-about__card-header">
-                <img src="assets/ofir3.png" alt="אופיר קריספין" class="ai-about__photo" />
-                <h3 class="ai-about__name">אופיר קריספין</h3>
-              </div>
-              <p class="ai-about__bio">רואה חשבון ומנהל כספים מוסמך ובעל תואר שני בחשבונאות וכלכלה, עם למעלה מ-10 שנות ניסיון בניהול כספים בחברות מובילות.<br/><br/>כיהן כסמנכ"ל כספים (CFO) בחברות גדולות במשק, מביא עמו ניסיון עשיר בניהול פיננסי ובפיתוח אסטרטגיות כלכליות.<br/><br/>אופיר מתמחה בניהול תזרים, בניית תקציב וגיבוש תוכנית עסקית מותאמת לצרכי העסק. אופיר הוא איש של מספרים, אבל מבין שמאחורי כל מספר יש אנשים וסיפור.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════
-       FAQ  (from Figma 2032-9936)
+       FAQ
   ══════════════════════════════════ -->
   <section class="ai-faq" id="faq">
     <div class="mn-wrap">
-      <h2 class="ai-faq__title">שאלות נפוצות (וגם תשובות!)</h2>
+      <h2 class="ai-faq__title">שאלות נפוצות</h2>
       <div class="ai-faq__list">
 
         <div class="ai-faq__item ai-faq__item--open">
           <button class="ai-faq__question" aria-expanded="true">
-            <span class="ai-faq__question-text">זה רק תוכנה?</span>
+            <span class="ai-faq__question-text">האם זה בחינם?</span>
             <span class="ai-faq__icon">−</span>
           </button>
           <div class="ai-faq__answer">
-            <p>לא. זה שירות היברידי שמשלב אנשי מקצוע (מנהל תזרים וכלכלן) יחד עם טכנולוגיית AI. אנחנו לא נותנים לך כלי עבודה – אנחנו לוקחים ממך את העבודה.</p>
+            <p>כן, לחלוטין. הוובינר חינמי, ללא התחייבות, ללא כרטיס אשראי.</p>
           </div>
         </div>
 
         <div class="ai-faq__item">
           <button class="ai-faq__question" aria-expanded="false">
-            <span class="ai-faq__question-text">איך נרשמים?</span>
+            <span class="ai-faq__question-text">האם זה מוקלט?</span>
             <span class="ai-faq__icon">+</span>
           </button>
           <div class="ai-faq__answer">
-            <p>זה פשוט וקל! לוחצים על אחד הכפתורים בטופס, ממלאים פרטים ואנחנו חוזרים אליכם. למה לא ישר להירשם? כי חשוב לנו לעשות אתכם שיחה קצרה, לוודא שהמערכת מתאימה לכם ב-100% ולהסביר איך מבצעים את השלבים הראשונים.</p>
+            <p>לא. חוויה חד-פעמית בלייב. אנחנו לא שולחים הקלטה אחרי — שווה להגיע.</p>
           </div>
         </div>
 
         <div class="ai-faq__item">
           <button class="ai-faq__question" aria-expanded="false">
-            <span class="ai-faq__question-text">כבר יש לי רואה חשבון ויועץ עסקי, למה אני צריך את זה?</span>
+            <span class="ai-faq__question-text">האם זה מכירה?</span>
             <span class="ai-faq__icon">+</span>
           </button>
           <div class="ai-faq__answer">
-            <p>הרו"ח שלכם עוסק בדיווחים, מסים ורגולציה – לא בניהול תזרים יומיומי. אנחנו ממלאים את הפער: מי שמסתכל על הכסף שלכם כל יום, מתריע בזמן אמת ועוזר לכם לקבל החלטות בוקר בוקר. הרו"ח לא עושה את זה – ולא אמור.</p>
+            <p>לא. זה וובינר חינוכי. בסוף יש הצעה אופציונלית של שבועיים ניסיון ב-HK Money — בלי התחייבות, בלי כרטיס אשראי. אתה מחליט.</p>
           </div>
         </div>
 
         <div class="ai-faq__item">
           <button class="ai-faq__question" aria-expanded="false">
-            <span class="ai-faq__question-text">אני בסה"כ עסק עצמאי קטן, נראה שזה מתאים לעסקים גדולים יותר?</span>
+            <span class="ai-faq__question-text">כמה זמן זה לוקח?</span>
             <span class="ai-faq__icon">+</span>
           </button>
           <div class="ai-faq__answer">
-            <p>ההפך. עסקים גדולים יש להם מנהלי כספים פנים-ארגוניים. עסקים קטנים ובינוניים – הם בדיוק מי שהכי זקוק לזה ולרוב הכי חסרים לו. HK Money AI נבנה במיוחד בשביל עסקים כמו שלכם.</p>
+            <p>בדיוק 60 דקות. מתחיל בזמן, נגמר בזמן.</p>
           </div>
         </div>
 
         <div class="ai-faq__item">
           <button class="ai-faq__question" aria-expanded="false">
-            <span class="ai-faq__question-text">אני לא סומך על AI לנהל לי את הכסף בעסק!</span>
+            <span class="ai-faq__question-text">מה אם אני לא יכול להגיע בלייב?</span>
             <span class="ai-faq__icon">+</span>
           </button>
           <div class="ai-faq__answer">
-            <p>זו בדיוק הסיבה שיש מנהל תזרים אנושי. ה-AI מנתח ומתריע – אבל אדם אמיתי בודק, מוודא ואחראי על הנתונים. אתם לא תלויים רק במכונה. תמיד יש אדם מאחורי המערכת.</p>
-          </div>
-        </div>
-
-        <div class="ai-faq__item">
-          <button class="ai-faq__question" aria-expanded="false">
-            <span class="ai-faq__question-text">למי יש זמן ללמוד עוד מערכת חדשה?</span>
-            <span class="ai-faq__icon">+</span>
-          </button>
-          <div class="ai-faq__answer">
-            <p>אין מה ללמוד. הכל מגיע לוואטסאפ שלכם – שם אתם כבר נמצאים. אין אפליקציה חדשה, אין דשבורד להתחבר אליו, אין הדרכות. פותחים וואטסאפ – הכל שם.</p>
-          </div>
-        </div>
-
-        <div class="ai-faq__item">
-          <button class="ai-faq__question" aria-expanded="false">
-            <span class="ai-faq__question-text">אני לא מבין כלום בנושאים פיננסיים – מה שוות ההמלצות?</span>
-            <span class="ai-faq__icon">+</span>
-          </button>
-          <div class="ai-faq__answer">
-            <p>המערכת מדברת בשפה אנושית, לא בשפה פיננסית. "יש לך ₪12,000 בחשבון, ביום חמישי יצאו משכורות של ₪18,000 – צריך לסדר את זה עד אז." כך זה נראה. פשוט, ברור, וניתן לפעולה.</p>
-          </div>
-        </div>
-
-        <div class="ai-faq__item">
-          <button class="ai-faq__question" aria-expanded="false">
-            <span class="ai-faq__question-text">הולך לי לא רע בינתיים – למה לשנות?</span>
-            <span class="ai-faq__icon">+</span>
-          </button>
-          <div class="ai-faq__answer">
-            <p>רוב העסקים שנסגרו "הלך להם לא רע" שבוע לפני שסגרו. בעיות תזרים מתפתחות לאט ומגיעות בהפתעה. HK Money AI נועד בדיוק לזה – לזהות את הבעיות לפני שהן מגיעות.</p>
-          </div>
-        </div>
-
-        <div class="ai-faq__item">
-          <button class="ai-faq__question" aria-expanded="false">
-            <span class="ai-faq__question-text">האם המערכת בטוחה? לא נוח לי לחבר אותה לחשבונות שלי.</span>
-            <span class="ai-faq__icon">+</span>
-          </button>
-          <div class="ai-faq__answer">
-            <p>אנחנו עובדים עם חברות Open Banking מורשות שפועלות תחת רגולציה מלאה של בנק ישראל. לא שומרים סיסמאות, ואין גישה להעברות כספים – קריאה בלבד. אותם תקנים שעובד איתם הבנק שלכם.</p>
-          </div>
-        </div>
-
-        <div class="ai-faq__item">
-          <button class="ai-faq__question" aria-expanded="false">
-            <span class="ai-faq__question-text">מה כולל ניהול הכספים שלכם ב-HK?</span>
-            <span class="ai-faq__icon">+</span>
-          </button>
-          <div class="ai-faq__answer">
-            <p>עדכון תזרים יומי בוואטסאפ, תחזית שבועית ומעקב רציף, התראות חכמות על חריגות ותשלומים עתידיים, מענה לשאלות דרך ה-AI 24/7, ופגישת ייעוץ חודשית עם יועץ פיננסי לתכנון קדימה.</p>
-          </div>
-        </div>
-
-        <div class="ai-faq__item">
-          <button class="ai-faq__question" aria-expanded="false">
-            <span class="ai-faq__question-text">שווה לשלם על מערכת לניהול כספים? נשמע כמו פריווילגיה לעשירים…</span>
-            <span class="ai-faq__icon">+</span>
-          </button>
-          <div class="ai-faq__answer">
-            <p>ההיפך הוא הנכון. התשלום על מניעת בעיה אחת – תשלום שלא הגיע, חיוב כפול, מינוס לא מתוכנן – מחזיר את עצמו עשרות מונים. הלקוחות שלנו מדווחים על חיסכון ממוצע של אלפי שקלים בחודש הראשון בלבד.</p>
+            <p>לצערנו אין הקלטה. הוובינר מתקיים פעם בכמה חודשים — שווה להשתדל להגיע. אם אתה לא יכול בתאריך הזה, השאר פרטים ונעדכן בוובינר הבא.</p>
           </div>
         </div>
 
@@ -1291,46 +931,33 @@
   </section>
 
   <!-- ══════════════════════════════════
-       NARRATIVE 2.3 — SUMMARY CTA
-       Final personal touch — partner's face once more before the form.
-       Hidden by default. Revealed by JS only when ?ref=<key> matches.
-  ══════════════════════════════════ -->
-  <section class="partner-summary" id="partner-summary" hidden>
-    <div class="partner-summary__inner">
-      <img src="" alt="" class="partner-summary__photo" id="partner-summary-photo" />
-      <h2 class="partner-summary__headline"><strong data-partner-firstname></strong> המליץ. עכשיו תיקח את הצעד הבא.</h2>
-      <p class="partner-summary__signature"><strong data-partner-fullname></strong>, רואה חשבון <span class="partner-summary__badge">HK Elite Partner</span></p>
-      <a href="#contact" class="mn-btn mn-btn--salmon partner-summary__cta">אני רוצה שיחה</a>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════
-       FINAL CONTACT
+       FORM — Webinar registration
   ══════════════════════════════════ -->
   <section class="mn-contact" id="contact">
     <div class="mn-wrap mn-contact__inner">
       <form class="mn-contact__form" id="mn-form" onsubmit="return false">
-        <p class="mn-contact__form-title">מלאו פרטים – נחזור אליכם תוך 24 שעות</p>
+        <p class="mn-contact__form-title">שריין מקום — חינם</p>
         <input type="text" name="full_name" placeholder="שם מלא" class="mn-input" required />
-        <input type="tel" name="phone" placeholder="טלפון" class="mn-input" required />
-        <input type="email" name="email" placeholder="מייל" class="mn-input" />
-        <input type="text" name="business" placeholder="שם העסק" class="mn-input" />
+        <input type="text" name="business" placeholder="שם העסק" class="mn-input" required />
+        <input type="tel" name="phone" placeholder="טלפון נייד" class="mn-input" required />
+        <input type="email" name="email" placeholder="מייל" class="mn-input" required />
         <input type="hidden" name="ref" id="partner-ref-field" value="" />
         <p class="partner-form-note" id="partner-form-note" hidden></p>
         <button type="submit" class="mn-btn mn-btn--salmon mn-btn--full mn-btn--xl">
-          רוצה AI + מנהל + יועץ בשבילי
+          שריין מקום בוובינר
         </button>
-        <p class="mn-contact__fine">נחזור אליכם תוך 24 שעות. ללא ספאם, ללא מכירות אגרסיביות.</p>
+        <p class="webinar-form-confirm">אישור הרשמה ולינק זום יישלחו אליך<br/>במייל ובוואטסאפ</p>
       </form>
       <div class="mn-contact__text">
         <h2 class="mn-section-title mn-section-title--white">
-          רוצים לדעת כמה כסף<br />יהיה לכם ביום שישי?
+          מקומות מוגבלים.<br />
+          <span class="mn-accent-salmon">ההזמנה אישית בלבד.</span>
         </h2>
-        <p class="mn-contact__sub">הדגמה אישית, חינמית, בוואטסאפ. תראו איך זה עובד ותחליטו.</p>
+        <p class="mn-contact__sub">60 דקות שישנו את איך שאתה רואה את העסק שלך — ללא עלות, ללא התחייבות.</p>
         <div class="mn-contact__badges">
-          <span class="mn-badge">✓ ללא התחייבות</span>
-          <span class="mn-badge">✓ הדגמה חינמית</span>
-          <span class="mn-badge">✓ תוצאות תוך שבוע</span>
+          <span class="mn-badge">✓ חינם לחלוטין</span>
+          <span class="mn-badge">✓ 60 דקות בלייב</span>
+          <span class="mn-badge">✓ מתנה ל-2 שבועות</span>
         </div>
       </div>
     </div>
@@ -1340,7 +967,7 @@
   <footer class="mn-footer">
     <div class="mn-wrap mn-footer__inner">
       <a href="#" class="mn-logo mn-logo--footer">
-        <img src="assets/hkmoneylogo.png" alt="HK Money AI" class="mn-logo__img" />
+        <img src="assets/hkmoneylogo.png" alt="HK Money" class="mn-logo__img" />
       </a>
       <div class="mn-footer__social">
         <a href="https://wa.me/972559647897" target="_blank" rel="noopener" class="mn-social-btn" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.099.543 4.07 1.497 5.785L0 24l6.393-1.675A11.947 11.947 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.857 0-3.594-.5-5.091-1.376L3 21.764l1.167-3.79A9.953 9.953 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg></a>
@@ -1348,7 +975,7 @@
         <a href="https://www.facebook.com/profile.php?id=61570354841007" target="_blank" rel="noopener" class="mn-social-btn" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
       </div>
       <p class="mn-footer__copy">מגדל השחר, אריאל שרון 4, גבעתיים</p>
-      <p class="mn-footer__copy">© 2025 HK Money AI | אייץ קיי חזות קריספין בע״מ ח.פ 517200168 | <a href="privacy.html" style="color:inherit">מדיניות פרטיות</a></p>
+      <p class="mn-footer__copy">© 2026 HK Money | אייץ קיי חזות קריספין בע״מ ח.פ 517200168 | <a href="privacy.html" style="color:inherit">מדיניות פרטיות</a></p>
     </div>
   </footer>
 
@@ -1356,28 +983,27 @@
   <script src="js/hk-money-ai-extra.js"></script>
   <script src="js/animations.js"></script>
   <script>
-    /* ─── Partner-aware page loader ───────────────────────────
+    /* ─── Partner-aware webinar invite loader ─────────────────
        Reads ?ref=<key> from URL, fetches partners-data.json, and
-       if a matching record exists, reveals four partner-aware
+       if a matching record exists, reveals three partner-aware
        sections (all hidden by default):
 
-         • .partner-hero       — heroic split (photo + accountant intro)
-         • .partner-bridge     — narrative bridge ("למה X שלח אותך לכאן")
-         • .partner-midquote   — second testimonial (between trio and how)
-         • .partner-summary    — final CTA before form
+         • .partner-hero       — invitation split (photo + accountant)
+         • .partner-bridge     — "למה X שלח אותך לכאן"
+         • .partner-midquote   — second personal recommendation
 
-       Plus the hidden form ref field and a "הופנית על ידי X" note
-       above the submit button.
+       Plus the hidden form ref field, the "הופנית על ידי X" note
+       above the submit button, and the "ללקוחות של X" subtitle
+       on the webinar card.
 
-       Falls back silently on no ref / no match / fetch failure.
+       Falls back silently on no ref / no match / fetch failure
+       — the page stays a generic webinar invite.
     ──────────────────────────────────────────────────────────── */
     (function () {
       var params = new URLSearchParams(window.location.search);
       var refKey = (params.get('ref') || '').trim().toLowerCase();
       if (!refKey) return;
 
-      // Set the hidden form field early so the ref is still submitted
-      // even if the fetch later fails.
       var refField = document.getElementById('partner-ref-field');
       if (refField) refField.value = refKey;
 
@@ -1390,7 +1016,6 @@
 
           var firstName = p.name.split(/\s+/)[0];
 
-          // Fill any element marked with the partner placeholder attributes.
           document.querySelectorAll('[data-partner-firstname]').forEach(function (el) {
             el.textContent = firstName;
           });
@@ -1398,7 +1023,7 @@
             el.textContent = p.name;
           });
 
-          // ── Partner hero (heroic split) ──
+          // ── Partner hero (invitation split) ──
           var hero = document.getElementById('partner-hero');
           var photo = document.getElementById('partner-hero-photo');
           var badge = document.getElementById('partner-hero-badge');
@@ -1425,10 +1050,6 @@
           var bridge = document.getElementById('partner-bridge');
           if (bridge) bridge.hidden = false;
 
-          // ── Headstart (the unfair advantage) ──
-          var headstart = document.getElementById('partner-headstart');
-          if (headstart) headstart.hidden = false;
-
           // ── Mid-quote (uses the same photo) ──
           var midquote = document.getElementById('partner-midquote');
           var midPhoto = document.getElementById('partner-midquote-photo');
@@ -1438,24 +1059,15 @@
           }
           if (midquote) midquote.hidden = false;
 
-          // ── Summary CTA (uses the same photo) ──
-          var summary = document.getElementById('partner-summary');
-          var summaryPhoto = document.getElementById('partner-summary-photo');
-          if (summaryPhoto) {
-            summaryPhoto.src = p.photo || '';
-            summaryPhoto.alt = p.name;
-          }
-          if (summary) summary.hidden = false;
+          // ── Webinar card subtitle: "ללקוחות של [שם רואה החשבון]" ──
+          // (The standalone webinar card is hidden via .has-partner CSS,
+          // but we still update the subtitle for browsers that may show it
+          // briefly before the body class lands.)
+          var partnerNameEl = document.getElementById('webinar-partner-name');
+          if (partnerNameEl) partnerNameEl.textContent = p.name;
 
-          // ── Problem-section headline swap ──
-          // The default headline disparages "the accountant's reports" — would
-          // contradict a partner referral. Hide default, reveal partner version.
-          var titleDefault = document.getElementById('problem-title-default');
-          var titlePartner = document.getElementById('problem-title-partner');
-          if (titleDefault) titleDefault.hidden = true;
-          if (titlePartner) titlePartner.hidden = false;
-
-          // Add a body class so partner-only CSS overrides can scope cleanly.
+          // Activate partner mode — hides the standalone webinar card
+          // (the invitation is now self-contained in partner-hero).
           document.body.classList.add('has-partner');
 
           // ── Form note "הופנית על ידי X" ──
@@ -1475,13 +1087,11 @@
       btn.addEventListener('click', () => {
         const item = btn.closest('.ai-faq__item');
         const isOpen = item.classList.contains('ai-faq__item--open');
-        // close all
         document.querySelectorAll('.ai-faq__item--open').forEach(el => {
           el.classList.remove('ai-faq__item--open');
           el.querySelector('.ai-faq__icon').textContent = '+';
           el.querySelector('.ai-faq__question').setAttribute('aria-expanded', 'false');
         });
-        // open clicked if it was closed
         if (!isOpen) {
           item.classList.add('ai-faq__item--open');
           btn.querySelector('.ai-faq__icon').textContent = '−';
