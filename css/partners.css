@@ -170,6 +170,109 @@
 }
 
 /* ══════════════════════════════════════
+   ABOUT — "רגע, מי אנחנו?" intro + founder cards
+══════════════════════════════════════ */
+.partners-about {
+  padding: 88px 0;
+  background: var(--white);
+}
+.partners-about__intro {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+.partners-about__intro .ai-section-divider-title {
+  margin-bottom: 28px;
+}
+.partners-about__lead {
+  font-family: 'Rubik', sans-serif;
+  font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+  color: var(--text);
+  line-height: 1.75;
+  margin: 0 0 20px;
+}
+.partners-about__lead:last-child { margin-bottom: 0; }
+
+.partners-about__divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  max-width: 140px;
+  margin: 56px auto 44px;
+}
+
+.partners-about__founders {
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+}
+.partners-about__founders-title {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: -.005em;
+  margin: 0 0 28px;
+}
+.partners-about__founders-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+.partners-founder {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: var(--off);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 22px 24px;
+  text-align: right;
+  transition: transform .2s, box-shadow .2s;
+}
+.partners-founder:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(12,64,104,.08);
+}
+.partners-founder__photo {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #d8e8f2, #b8cfdc);
+  border: 3px solid var(--white);
+  box-shadow: 0 6px 18px rgba(12,64,104,.14);
+}
+.partners-founder__body { flex: 1; min-width: 0; }
+.partners-founder__name {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0 0 4px;
+  letter-spacing: -.01em;
+}
+.partners-founder__bio {
+  font-family: 'Rubik', sans-serif;
+  font-size: .92rem;
+  color: var(--muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.partners-about__more-link {
+  display: block;
+  text-align: center;
+  margin-top: 36px;
+  font-family: 'Rubik', sans-serif;
+  font-size: .95rem;
+  font-weight: 500;
+  color: var(--blue);
+  transition: color .2s;
+}
+.partners-about__more-link:hover { color: var(--navy); }
+
+/* ══════════════════════════════════════
    OFFER — "מה אתה מקבל כ-Elite Partner"
    6-card grid with icon + title + body.
 ══════════════════════════════════════ */
@@ -556,6 +659,12 @@
   .partners-hero { padding: calc(var(--hdr-h) + 48px) 0 60px; }
   .partners-hero__inner { padding: 0 20px; }
   .partners-hero__headline { font-size: clamp(2rem, 9vw, 3rem); }
+
+  .partners-about { padding: 56px 0; }
+  .partners-about__divider { margin: 40px auto 32px; }
+  .partners-about__founders-grid { grid-template-columns: 1fr; gap: 14px; }
+  .partners-founder { padding: 18px 20px; }
+  .partners-founder__photo { width: 64px; height: 64px; }
 
   .partners-pain { padding: 56px 0; }
   .partners-pain__bubbles { grid-template-columns: 1fr; gap: 12px; }
